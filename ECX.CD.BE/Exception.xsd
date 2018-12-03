@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Exception" targetNamespace="http://tempuri.org/Exception.xsd" xmlns:mstns="http://tempuri.org/Exception.xsd" xmlns="http://tempuri.org/Exception.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="dbCentralDepositoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="dbCentralDepositoryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.dbCentralDepositoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Exception" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Exception" msprop:Generator_DataSetName="Exception" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExceptionLog" msprop:Generator_UserTableName="ExceptionLog" msprop:Generator_RowDeletedName="ExceptionLogRowDeleted" msprop:Generator_RowChangedName="ExceptionLogRowChanged" msprop:Generator_RowClassName="ExceptionLogRow" msprop:Generator_RowChangingName="ExceptionLogRowChanging" msprop:Generator_RowEvArgName="ExceptionLogRowChangeEvent" msprop:Generator_RowEvHandlerName="ExceptionLogRowChangeEventHandler" msprop:Generator_TableClassName="ExceptionLogDataTable" msprop:Generator_TableVarName="tableExceptionLog" msprop:Generator_RowDeletingName="ExceptionLogRowDeleting" msprop:Generator_TablePropName="ExceptionLog">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="ExceptionDate" msprop:Generator_UserColumnName="ExceptionDate" msprop:Generator_ColumnVarNameInTable="columnExceptionDate" msprop:Generator_ColumnPropNameInRow="ExceptionDate" msprop:Generator_ColumnPropNameInTable="ExceptionDateColumn" type="xs:dateTime" />
+              <xs:element name="ExceptionType" msprop:Generator_UserColumnName="ExceptionType" msprop:Generator_ColumnVarNameInTable="columnExceptionType" msprop:Generator_ColumnPropNameInRow="ExceptionType" msprop:Generator_ColumnPropNameInTable="ExceptionTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortMessage" msprop:Generator_UserColumnName="ShortMessage" msprop:Generator_ColumnVarNameInTable="columnShortMessage" msprop:Generator_ColumnPropNameInRow="ShortMessage" msprop:Generator_ColumnPropNameInTable="ShortMessageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullMessage" msprop:Generator_UserColumnName="FullMessage" msprop:Generator_ColumnVarNameInTable="columnFullMessage" msprop:Generator_ColumnPropNameInRow="FullMessage" msprop:Generator_ColumnPropNameInTable="FullMessageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_ColumnVarNameInTable="columnUserName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="350" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UserGuid" msprop:Generator_ColumnVarNameInTable="columnUserGuid" msprop:Generator_ColumnPropNameInRow="UserGuid" msprop:Generator_ColumnPropNameInTable="UserGuidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_ColumnVarNameInTable="columnRemark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdNo" msprop:Generator_UserColumnName="IdNo" msprop:nullValue="_throw" msprop:Generator_ColumnVarNameInTable="columnIdNo" msprop:Generator_ColumnPropNameInTable="IdNoColumn" msprop:Generator_ColumnPropNameInRow="IdNo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

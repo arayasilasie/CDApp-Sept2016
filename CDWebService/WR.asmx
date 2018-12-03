@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="WR.asmx.cs" Class="ECX.CD.WR" %>

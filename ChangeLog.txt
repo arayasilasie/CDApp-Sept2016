@@ -1,0 +1,11 @@
+Warehouse Receipt Expiry Letter (Report) format change
+
+after deployment
+
+* Web configuration changed on "localhost" service references to point production server 10.3.5.67
+
+* on ECX.CD.DA\Coded\PUN.cs\GetPUNForExtendExpiryApproval the Query is avoid to avoide duplication of retrival list and making the system busy
+
+* on Controls/WRDetail.ascx.cs line 101 assignment value to textbox "txtNumberOfBags.Text" updated to round the number to 2 decimal points only
+
+* change on expiration notice letter - check aggreement between member and client with new commodity symbols.

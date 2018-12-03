@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2923312-C598-4131-A661-816DEA02B5AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ECX.CD.BE</RootNamespace>
+    <AssemblyName>ECX.CD.BE</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.Document, Version=6.0.2250.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports.Viewer6, Version=6.0.2250.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports6, Version=6.0.2250.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankAccount.cs">
+      <DependentUpon>BankAccount.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BankAccount.Designer.cs">
+      <DependentUpon>BankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CNSFeesCharges.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CNSFeesCharges.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.cs" />
+    <Compile Include="Exception.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exception.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GIN.cs">
+      <DependentUpon>GIN.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GIN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GIN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GRN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GRN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\CheckWHRRequest.cs" />
+    <Compile Include="IF\CheckWHRResponse.cs" />
+    <Compile Include="IF\LNS.cs">
+      <DependentUpon>LNS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IF\LNS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LNS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\Pledge.cs">
+      <DependentUpon>Pledge.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IF\Pledge.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pledge.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\PRML.cs">
+      <DependentUpon>PRML.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IF\PRML.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRML.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\PRMLView.cs" />
+    <Compile Include="IF\RejectionReason.cs" />
+    <Compile Include="IF\FR.cs">
+      <DependentUpon>FR.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IF\FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FR.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\ForeclosureView.cs" />
+    <Compile Include="IF\UP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UP.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IF\Requests.cs" />
+    <Compile Include="MATT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MATT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MCP.Designer.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PUN.cs">
+      <DependentUpon>PUN.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PUN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TitleTransfer.cs">
+      <DependentUpon>TitleTransfer.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IF\UPView.cs" />
+    <Compile Include="TitleTransfer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TitleTransfer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TradableWHR.cs" />
+    <Compile Include="Workflow.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Workflow.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WR.cs">
+      <DependentUpon>WR.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WR.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BankAccount.xsc">
+      <DependentUpon>BankAccount.xsd</DependentUpon>
+    </None>
+    <None Include="BankAccount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BankAccount.xss">
+      <DependentUpon>BankAccount.xsd</DependentUpon>
+    </None>
+    <None Include="CNSFeesCharges.xsc">
+      <DependentUpon>CNSFeesCharges.xsd</DependentUpon>
+    </None>
+    <None Include="CNSFeesCharges.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CNSFeesCharges.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CNSFeesCharges.xss">
+      <DependentUpon>CNSFeesCharges.xsd</DependentUpon>
+    </None>
+    <None Include="Exception.xsc">
+      <DependentUpon>Exception.xsd</DependentUpon>
+    </None>
+    <None Include="Exception.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Exception.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Exception.xss">
+      <DependentUpon>Exception.xsd</DependentUpon>
+    </None>
+    <None Include="FR.xsc">
+      <DependentUpon>FR.xsd</DependentUpon>
+    </None>
+    <None Include="FR.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FR.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FR.xss">
+      <DependentUpon>FR.xsd</DependentUpon>
+    </None>
+    <None Include="GIN.xsc">
+      <DependentUpon>GIN.xsd</DependentUpon>
+    </None>
+    <None Include="GIN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GIN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GIN.xss">
+      <DependentUpon>GIN.xsd</DependentUpon>
+    </None>
+    <None Include="GRN.xsc">
+      <DependentUpon>GRN.xsd</DependentUpon>
+    </None>
+    <None Include="GRN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GRN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GRN.xss">
+      <DependentUpon>GRN.xsd</DependentUpon>
+    </None>
+    <None Include="IF\LNS.xsc">
+      <DependentUpon>LNS.xsd</DependentUpon>
+    </None>
+    <None Include="IF\LNS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LNS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IF\LNS.xss">
+      <DependentUpon>LNS.xsd</DependentUpon>
+    </None>
+    <None Include="IF\Pledge.xsc">
+      <DependentUpon>Pledge.xsd</DependentUpon>
+    </None>
+    <None Include="IF\Pledge.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pledge.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IF\Pledge.xss">
+      <DependentUpon>Pledge.xsd</DependentUpon>
+    </None>
+    <None Include="IF\PRML.xsc">
+      <DependentUpon>PRML.xsd</DependentUpon>
+    </None>
+    <None Include="IF\PRML.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRML.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IF\PRML.xss">
+      <DependentUpon>PRML.xsd</DependentUpon>
+    </None>
+    <None Include="IF\FR.xsc">
+      <DependentUpon>FR.xsd</DependentUpon>
+    </None>
+    <None Include="IF\FR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FR.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IF\FR.xss">
+      <DependentUpon>FR.xsd</DependentUpon>
+    </None>
+    <None Include="IF\UP.xsc">
+      <DependentUpon>UP.xsd</DependentUpon>
+    </None>
+    <None Include="IF\UP.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UP.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IF\UP.xss">
+      <DependentUpon>UP.xsd</DependentUpon>
+    </None>
+    <None Include="MATT.xsc">
+      <DependentUpon>MATT.xsd</DependentUpon>
+    </None>
+    <None Include="MATT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MATT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MATT.xss">
+      <DependentUpon>MATT.xsd</DependentUpon>
+    </None>
+    <None Include="MCP.xsc">
+      <DependentUpon>MCP.xsd</DependentUpon>
+    </None>
+    <None Include="MCP.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MCP.xss">
+      <DependentUpon>MCP.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PUN.xsc">
+      <DependentUpon>PUN.xsd</DependentUpon>
+    </None>
+    <None Include="PUN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PUN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PUN.xss">
+      <DependentUpon>PUN.xsd</DependentUpon>
+    </None>
+    <None Include="TitleTransfer.xsc">
+      <DependentUpon>TitleTransfer.xsd</DependentUpon>
+    </None>
+    <None Include="TitleTransfer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TitleTransfer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TitleTransfer.xss">
+      <DependentUpon>TitleTransfer.xsd</DependentUpon>
+    </None>
+    <None Include="Workflow.xsc">
+      <DependentUpon>Workflow.xsd</DependentUpon>
+    </None>
+    <None Include="Workflow.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Workflow.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Workflow.xss">
+      <DependentUpon>Workflow.xsd</DependentUpon>
+    </None>
+    <None Include="WR.xsc">
+      <DependentUpon>WR.xsd</DependentUpon>
+    </None>
+    <None Include="WR.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WR.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WR.xss">
+      <DependentUpon>WR.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d70fc66f-29b3-4fa3-ab03-8af8c938aa07" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="5f261f6d-e318-4ece-9c25-851a37f01e6e" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="8b7fb57e-bbe6-42d3-a07b-563ad4e7ef91" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="050b55d3-2e1c-4e17-b48f-14cb2544c91e" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" />
+    <MetadataFile FileName="Arrays1.xsd" MetadataType="Schema" ID="78841462-6450-4e8c-b6f2-149fc166d9b0" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" />
+    <MetadataFile FileName="System.Data1.xsd" MetadataType="Schema" ID="017b61e6-3511-48d7-b0a4-ca855b17eb21" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/TradeTitleTransfer.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

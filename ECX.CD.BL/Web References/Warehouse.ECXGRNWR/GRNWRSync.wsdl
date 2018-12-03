@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="CancelGRN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GRNId" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrackingNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="tns:RequestforApprovedGRNCancelationStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="RequestforApprovedGRNCancelationStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="New" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Cancelled" />
+          <s:enumeration value="Rejected" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CancelGRNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelGRNResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelGRNCancellationRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TrackingNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelGRNCancellationRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelGRNCancellationRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelGRNSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelGRN" />
+  </wsdl:message>
+  <wsdl:message name="CancelGRNSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelGRNResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelGRNCancellationRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelGRNCancellationRequest" />
+  </wsdl:message>
+  <wsdl:message name="CancelGRNCancellationRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelGRNCancellationRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GRNWRSyncSoap">
+    <wsdl:operation name="CancelGRN">
+      <wsdl:input message="tns:CancelGRNSoapIn" />
+      <wsdl:output message="tns:CancelGRNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelGRNCancellationRequest">
+      <wsdl:input message="tns:CancelGRNCancellationRequestSoapIn" />
+      <wsdl:output message="tns:CancelGRNCancellationRequestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GRNWRSyncSoap" type="tns:GRNWRSyncSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelGRN">
+      <soap:operation soapAction="http://tempuri.org/CancelGRN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelGRNCancellationRequest">
+      <soap:operation soapAction="http://tempuri.org/CancelGRNCancellationRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GRNWRSyncSoap12" type="tns:GRNWRSyncSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CancelGRN">
+      <soap12:operation soapAction="http://tempuri.org/CancelGRN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelGRNCancellationRequest">
+      <soap12:operation soapAction="http://tempuri.org/CancelGRNCancellationRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GRNWRSync">
+    <wsdl:port name="GRNWRSyncSoap" binding="tns:GRNWRSyncSoap">
+      <soap:address location="http://10.1.5.8/WarehouseApplication/GRNWRSync.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GRNWRSyncSoap12" binding="tns:GRNWRSyncSoap12">
+      <soap12:address location="http://10.1.5.8/WarehouseApplication/GRNWRSync.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

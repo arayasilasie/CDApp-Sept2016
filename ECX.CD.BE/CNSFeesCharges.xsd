@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CNSFeesCharges" targetNamespace="http://tempuri.org/CNSFeesCharges.xsd" xmlns:mstns="http://tempuri.org/CNSFeesCharges.xsd" xmlns="http://tempuri.org/CNSFeesCharges.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StagingdbCentralDepositoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StagingdbCentralDepositoryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.StagingdbCentralDepositoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vwCNS_ChargesTableAdapter" GeneratorDataComponentClassName="vwCNS_ChargesTableAdapter" Name="vwCNS_Charges" UserDataComponentName="vwCNS_ChargesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="StagingdbCentralDepositoryConnectionString (Settings)" DbObjectName="StagingdbCentralDepository.dbo.vwCNS_Charges" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Guid, MNOGuid, TradeId, WHRNO, CommodityGradeGuid, CommodityClassGuid, CommodityGuid, MoistureLoss, ActualWeight FROM dbo.vwCNS_Charges</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Guid" DataSetColumn="Guid" />
+              <Mapping SourceColumn="MNOGuid" DataSetColumn="MNOGuid" />
+              <Mapping SourceColumn="TradeId" DataSetColumn="TradeId" />
+              <Mapping SourceColumn="WHRNO" DataSetColumn="WHRNO" />
+              <Mapping SourceColumn="CommodityGradeGuid" DataSetColumn="CommodityGradeGuid" />
+              <Mapping SourceColumn="CommodityClassGuid" DataSetColumn="CommodityClassGuid" />
+              <Mapping SourceColumn="CommodityGuid" DataSetColumn="CommodityGuid" />
+              <Mapping SourceColumn="MoistureLoss" DataSetColumn="MoistureLoss" />
+              <Mapping SourceColumn="ActualWeight" DataSetColumn="ActualWeight" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CNSFeesCharges" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="CNSFeesCharges" msprop:Generator_UserDSName="CNSFeesCharges" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vwCNS_Charges" msprop:Generator_UserTableName="vwCNS_Charges" msprop:Generator_RowDeletedName="vwCNS_ChargesRowDeleted" msprop:Generator_TableClassName="vwCNS_ChargesDataTable" msprop:Generator_RowChangedName="vwCNS_ChargesRowChanged" msprop:Generator_RowClassName="vwCNS_ChargesRow" msprop:Generator_RowChangingName="vwCNS_ChargesRowChanging" msprop:Generator_RowEvArgName="vwCNS_ChargesRowChangeEvent" msprop:Generator_RowEvHandlerName="vwCNS_ChargesRowChangeEventHandler" msprop:Generator_TablePropName="vwCNS_Charges" msprop:Generator_TableVarName="tablevwCNS_Charges" msprop:Generator_RowDeletingName="vwCNS_ChargesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:long" />
+              <xs:element name="Guid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Guid" msprop:Generator_ColumnPropNameInRow="Guid" msprop:Generator_ColumnVarNameInTable="columnGuid" msprop:Generator_ColumnPropNameInTable="GuidColumn" type="xs:string" />
+              <xs:element name="MNOGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="MNOGuid" msprop:Generator_ColumnPropNameInRow="MNOGuid" msprop:Generator_ColumnVarNameInTable="columnMNOGuid" msprop:Generator_ColumnPropNameInTable="MNOGuidColumn" type="xs:string" />
+              <xs:element name="TradeId" msprop:Generator_UserColumnName="TradeId" msprop:Generator_ColumnPropNameInRow="TradeId" msprop:Generator_ColumnVarNameInTable="columnTradeId" msprop:Generator_ColumnPropNameInTable="TradeIdColumn" type="xs:long" />
+              <xs:element name="WHRNO" msprop:Generator_UserColumnName="WHRNO" msprop:Generator_ColumnPropNameInRow="WHRNO" msprop:Generator_ColumnVarNameInTable="columnWHRNO" msprop:Generator_ColumnPropNameInTable="WHRNOColumn" type="xs:long" />
+              <xs:element name="CommodityGradeGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CommodityGradeGuid" msprop:Generator_ColumnPropNameInRow="CommodityGradeGuid" msprop:Generator_ColumnVarNameInTable="columnCommodityGradeGuid" msprop:Generator_ColumnPropNameInTable="CommodityGradeGuidColumn" type="xs:string" />
+              <xs:element name="CommodityClassGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CommodityClassGuid" msprop:Generator_ColumnPropNameInRow="CommodityClassGuid" msprop:Generator_ColumnVarNameInTable="columnCommodityClassGuid" msprop:Generator_ColumnPropNameInTable="CommodityClassGuidColumn" type="xs:string" />
+              <xs:element name="CommodityGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CommodityGuid" msprop:Generator_ColumnPropNameInRow="CommodityGuid" msprop:Generator_ColumnVarNameInTable="columnCommodityGuid" msprop:Generator_ColumnPropNameInTable="CommodityGuidColumn" type="xs:string" />
+              <xs:element name="MoistureLoss" msprop:Generator_UserColumnName="MoistureLoss" msprop:Generator_ColumnPropNameInRow="MoistureLoss" msprop:Generator_ColumnVarNameInTable="columnMoistureLoss" msprop:Generator_ColumnPropNameInTable="MoistureLossColumn" type="xs:decimal" />
+              <xs:element name="ActualWeight" msprop:Generator_UserColumnName="ActualWeight" msprop:Generator_ColumnPropNameInRow="ActualWeight" msprop:Generator_ColumnVarNameInTable="columnActualWeight" msprop:Generator_ColumnPropNameInTable="ActualWeightColumn" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vwCNS_Charges" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

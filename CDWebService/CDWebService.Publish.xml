@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\SOURCE\pub" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="04/18/2013 05:05:46" />
+    <file relUrl="WebForm1.aspx" publishTime="08/03/2010 18:23:40" />
+    <file relUrl="WR.asmx" publishTime="12/14/2009 17:40:42" />
+    <file relUrl="bin/ECX.CD.BE.dll" publishTime="05/06/2013 06:43:04" />
+    <file relUrl="bin/ECX.CD.BL.dll" publishTime="05/09/2013 00:55:41" />
+    <file relUrl="bin/ECX.CD.BL.pdb" publishTime="05/09/2013 00:55:41" />
+    <file relUrl="WRForTrading.asmx" publishTime="02/27/2011 18:07:15" />
+    <file relUrl="bin/ECX.CD.BL.XmlSerializers.dll" publishTime="05/09/2013 00:55:43" />
+    <file relUrl="bin/CDWebService.pdb" publishTime="05/09/2013 00:55:43" />
+    <file relUrl="WRF.asmx" publishTime="06/07/2010 23:29:09" />
+    <file relUrl="bin/CDWebService.dll" publishTime="05/09/2013 00:55:43" />
+    <file relUrl="bin/ECX.CD.BE.pdb" publishTime="05/06/2013 06:43:04" />
+    <file relUrl="BankAccount.asmx" publishTime="10/11/2011 09:01:22" />
+    <file relUrl="bin/ECX.CD.DA.pdb" publishTime="05/09/2013 00:55:39" />
+    <file relUrl="bin/ECX.CD.DA.XmlSerializers.dll" publishTime="05/09/2013 00:55:40" />
+    <file relUrl="bin/ECX.CD.DA.dll" publishTime="05/09/2013 00:55:39" />
+  </publishProfile>
+</publishData>

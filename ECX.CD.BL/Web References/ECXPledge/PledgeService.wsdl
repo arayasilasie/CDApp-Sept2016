@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://pledgews/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PledgeService" targetNamespace="http://pledgews/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.1.5.11:8080/ECXWRFWS-war/PledgeService?xsd=1" namespace="http://pledgews/" />
+    </xsd:schema>
+  </types>
+  <message name="authorizePledgeResponce">
+    <part name="parameters" element="tns:authorizePledgeResponce" />
+  </message>
+  <message name="authorizePledgeResponceResponse">
+    <part name="parameters" element="tns:authorizePledgeResponceResponse" />
+  </message>
+  <message name="getAllPledgeRequest">
+    <part name="parameters" element="tns:getAllPledgeRequest" />
+  </message>
+  <message name="getAllPledgeRequestResponse">
+    <part name="parameters" element="tns:getAllPledgeRequestResponse" />
+  </message>
+  <message name="getPledgeRequestByBank">
+    <part name="parameters" element="tns:getPledgeRequestByBank" />
+  </message>
+  <message name="getPledgeRequestByBankResponse">
+    <part name="parameters" element="tns:getPledgeRequestByBankResponse" />
+  </message>
+  <portType name="Pledge">
+    <operation name="authorizePledgeResponce">
+      <input message="tns:authorizePledgeResponce" />
+      <output message="tns:authorizePledgeResponceResponse" />
+    </operation>
+    <operation name="getAllPledgeRequest">
+      <input message="tns:getAllPledgeRequest" />
+      <output message="tns:getAllPledgeRequestResponse" />
+    </operation>
+    <operation name="getPledgeRequestByBank">
+      <input message="tns:getPledgeRequestByBank" />
+      <output message="tns:getPledgeRequestByBankResponse" />
+    </operation>
+  </portType>
+  <binding name="PledgePortBinding" type="tns:Pledge">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="authorizePledgeResponce">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllPledgeRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getPledgeRequestByBank">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PledgeService">
+    <port name="PledgePort" binding="tns:PledgePortBinding">
+      <soap:address location="http://10.1.5.11:8080/ECXWRFWS-war/PledgeService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetGINLoadingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ginId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINLoadingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINLoadingDetailResult" type="tns:CGINLoading" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CGINLoading">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BagType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateLoaded" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalNoOfBags" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoadedStacks" type="tns:ArrayOfCLoadedStack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCLoadedStack">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CLoadedStack" nillable="true" type="tns:CLoadedStack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CLoadedStack">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Shed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stack" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfBags" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoadingSupervisor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGINScalingDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ginId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINScalingDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINScalingDetailResult" type="tns:CGINScaling" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CGINScaling">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateWeighed" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScaleTicketNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TruckWeight" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossWeight" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeighingSupervisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReturnedBags" type="tns:ArrayOfCReturnedBag" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCReturnedBag">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CReturnedBag" nillable="true" type="tns:CReturnedBag" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CReturnedBag">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Shed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stack" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfBags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Size" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGINStatusList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetGINStatusListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINStatusListResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExtendPUN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="punExtensions" type="tns:ArrayOfCExpiredPUNExtension" />
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="invocationDateTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCExpiredPUNExtension">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CExpiredPUNExtension" nillable="true" type="tns:CExpiredPUNExtension" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CExpiredPUNExtension">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PickupNoticeId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoOfDays" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExtendPUNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExtendPUNResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ginId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINReportResult" type="tns:CGINReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CGINReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GINId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GINNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateIssued" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Warehouse" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClientId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NIDType" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIDNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommodityGradeId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NetWeight" nillable="true" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScaleTicketNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BagType" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfBags" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DriverName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseIssuedPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlateNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePickupAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pickupAgentId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="nidType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="nidNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentTel" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePickupAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatePickupAgentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGINLoadingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGINLoadingDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetGINLoadingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINLoadingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGINScalingDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGINScalingDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetGINScalingDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINScalingDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGINStatusListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGINStatusList" />
+  </wsdl:message>
+  <wsdl:message name="GetGINStatusListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINStatusListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExtendPUNSoapIn">
+    <wsdl:part name="parameters" element="tns:ExtendPUN" />
+  </wsdl:message>
+  <wsdl:message name="ExtendPUNSoapOut">
+    <wsdl:part name="parameters" element="tns:ExtendPUNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGINReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGINReport" />
+  </wsdl:message>
+  <wsdl:message name="GetGINReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickupAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePickupAgent" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePickupAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePickupAgentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GINDetailSoap">
+    <wsdl:operation name="GetGINLoadingDetail">
+      <wsdl:input message="tns:GetGINLoadingDetailSoapIn" />
+      <wsdl:output message="tns:GetGINLoadingDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGINScalingDetail">
+      <wsdl:input message="tns:GetGINScalingDetailSoapIn" />
+      <wsdl:output message="tns:GetGINScalingDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGINStatusList">
+      <wsdl:input message="tns:GetGINStatusListSoapIn" />
+      <wsdl:output message="tns:GetGINStatusListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExtendPUN">
+      <wsdl:input message="tns:ExtendPUNSoapIn" />
+      <wsdl:output message="tns:ExtendPUNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGINReport">
+      <wsdl:input message="tns:GetGINReportSoapIn" />
+      <wsdl:output message="tns:GetGINReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickupAgent">
+      <wsdl:input message="tns:UpdatePickupAgentSoapIn" />
+      <wsdl:output message="tns:UpdatePickupAgentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GINDetailSoap" type="tns:GINDetailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGINLoadingDetail">
+      <soap:operation soapAction="http://tempuri.org/GetGINLoadingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINScalingDetail">
+      <soap:operation soapAction="http://tempuri.org/GetGINScalingDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINStatusList">
+      <soap:operation soapAction="http://tempuri.org/GetGINStatusList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtendPUN">
+      <soap:operation soapAction="http://tempuri.org/ExtendPUN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINReport">
+      <soap:operation soapAction="http://tempuri.org/GetGINReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickupAgent">
+      <soap:operation soapAction="http://tempuri.org/UpdatePickupAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GINDetailSoap12" type="tns:GINDetailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGINLoadingDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetGINLoadingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINScalingDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetGINScalingDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINStatusList">
+      <soap12:operation soapAction="http://tempuri.org/GetGINStatusList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtendPUN">
+      <soap12:operation soapAction="http://tempuri.org/ExtendPUN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGINReport">
+      <soap12:operation soapAction="http://tempuri.org/GetGINReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePickupAgent">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePickupAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GINDetail">
+    <wsdl:port name="GINDetailSoap" binding="tns:GINDetailSoap">
+      <soap:address location="http://10.3.5.68:5034/GRNInformation/GINDetail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GINDetailSoap12" binding="tns:GINDetailSoap12">
+      <soap12:address location="http://10.3.5.68:5034/GRNInformation/GINDetail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

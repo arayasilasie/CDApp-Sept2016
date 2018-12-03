@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://prml/" targetNamespace="http://prml/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ECXRequest" type="tns:ECXRequest" />
+  <xs:element name="ECXRequestData" type="tns:ecxRequestData" />
+  <xs:element name="ECXRequestHeader" type="tns:ecxRequestHeader" />
+  <xs:element name="Instruction" type="tns:instruction" />
+  <xs:element name="Section" type="tns:section" />
+  <xs:element name="Transaction" type="tns:Transaction" />
+  <xs:element name="authorisePRML" type="tns:authorisePRML" />
+  <xs:element name="authorisePRMLResponse" type="tns:authorisePRMLResponse" />
+  <xs:element name="getAllPRML" type="tns:getAllPRML" />
+  <xs:element name="getAllPRMLResponse" type="tns:getAllPRMLResponse" />
+  <xs:element name="getPRMLRequestByBank" type="tns:getPRMLRequestByBank" />
+  <xs:element name="getPRMLRequestByBankResponse" type="tns:getPRMLRequestByBankResponse" />
+  <xs:complexType name="getPRMLRequestByBank">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string" />
+      <xs:element minOccurs="0" name="bank" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPRMLRequestByBankResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ECXRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ECXRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ECXRequestHeader" type="tns:ecxRequestHeader" />
+      <xs:element minOccurs="0" name="ECXRequestData" type="tns:ecxRequestData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxRequestHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsLive" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestDestination" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestSignature" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bank" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Section" type="tns:section" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="section">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SectionType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" type="tns:Transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Transaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Type" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Instruction" type="tns:instruction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="instruction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchName" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentLots" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXClientID" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXMemberID" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpiryDate" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationName" type="xs:string" />
+      <xs:element minOccurs="0" name="OriginalLots" type="xs:string" />
+      <xs:element minOccurs="0" name="PayOutValue" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="TradePrice" type="xs:double" />
+      <xs:element name="WHRID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authorisePRML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="allecxPRMLRequest" type="tns:ecxAllPRMLRequest" />
+      <xs:element minOccurs="0" name="keyfile" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="filename" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxAllPRMLRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ecxprmlrequest" nillable="true" type="tns:ECXRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authorisePRMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllPRML">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllPRMLResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ecxAllPRMLRequest" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,2475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="LoadAccount">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoadAccountResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClientPayInAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ClientGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientPayInAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientPayInAccountsResult" type="tns:ArrayOfCClientPayIn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCClientPayIn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CClientPayIn" nillable="true" type="tns:CClientPayIn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CClientPayIn">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CAccount" abstract="true">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AccountGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubSetting" type="tns:CSubSetting" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="BankBranch" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CSubSetting">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SubSetting" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubSettingValue" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMemberPayInAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberPayInAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberPayInAccountsResult" type="tns:ArrayOfCMemberPayIn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCMemberPayIn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CMemberPayIn" nillable="true" type="tns:CMemberPayIn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CMemberPayIn">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetClientPayOutAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ClientGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClientPayOutAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClientPayOutAccountsResult" type="tns:ArrayOfCClientPayOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCClientPayOut">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CClientPayOut" nillable="true" type="tns:CClientPayOut" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CClientPayOut">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetMemberPayOutAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberPayOutAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberPayOutAccountsResult" type="tns:ArrayOfCMemberPayOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCMemberPayOut">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CMemberPayOut" nillable="true" type="tns:CMemberPayOut" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CMemberPayOut">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetClearingPayInAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradingMember" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClearingPayInAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClearingPayInAccountsResult" type="tns:ArrayOfCClearingPayIn" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCClearingPayIn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CClearingPayIn" nillable="true" type="tns:CClearingPayIn" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CClearingPayIn">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ClearingMember" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="TradingMember" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="ClearingLimit" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetClearingPayOutAccounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClearingPayOutAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClearingPayOutAccountsResult" type="tns:ArrayOfCClearingPayOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCClearingPayOut">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CClearingPayOut" nillable="true" type="tns:CClearingPayOut" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CClearingPayOut">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CAccount" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="IsClientPayInAccountsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ClientGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsClientPayInAccountsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsClientPayInAccountsExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMemberPayInAccountsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMemberPayInAccountsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsMemberPayInAccountsExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMemberPayOutAccountsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsMemberPayOutAccountsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsMemberPayOutAccountsExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsClientPayOutAccountsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MemberGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ClientGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsClientPayOutAccountsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsClientPayOutAccountsExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsClearingPayInAccountsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradingMember" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValueTobeCharged" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsClearingPayInAccountsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsClearingPayInAccountsExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="BranchGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceUpdateDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="PriviousBalance" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAccountStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAccountStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAccountStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveAccountByOwnerAndType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetActiveAccountByOwnerAndTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetActiveAccountByOwnerAndTypeResult" type="tns:ArrayOfSERAccount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSERAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SERAccount" nillable="true" type="tns:SERAccount" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SERAccount">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="UniqueIdentifier" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Priority" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="BranchGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceUpdateDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PriviousBalance" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OwnBothClientPayInAndPayOut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OwnersGuidList" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="PayInGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="PayOutGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OwnBothClientPayInAndPayOutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OwnBothClientPayInAndPayOutResult" type="tns:ArrayOfSEROwnBothClientPayInAndPayOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSEROwnBothClientPayInAndPayOut">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SEROwnBothClientPayInAndPayOut" nillable="true" type="tns:SEROwnBothClientPayInAndPayOut" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SEROwnBothClientPayInAndPayOut">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasPayIn" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasPayOut" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="OwnAccountType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OwnersGuidList" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OwnAccountTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OwnAccountTypeResult" type="tns:ArrayOfSEROwnBothClientPayInAndPayOut" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePriority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AccountGuidWithPriority" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePriorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangePriorityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllActiveECXSettlementAccounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllActiveECXSettlementAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllActiveECXSettlementAccountsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankAccountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayInRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayInRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayInRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOutRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOutRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayOutRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="KeyFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BalanceRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayInResponce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayInResponceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PayInResponceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOutResponce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PayOutResponceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PayOutResponceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceResponce">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BalanceResponceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceResponceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuthorizeTransactionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionsInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionsInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AuthorizeTransactionsInsertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionsExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="TransactionType" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthorizeTransactionsExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthorizeTransactionsExistsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommoditySettingInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccountGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommoditySettingInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommoditySettingInsertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommoditySettingByOwnerAndAccountType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SERAccountListForSetting">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UniqueIdentifier" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccountGuid" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CommodityGuid" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSERAccountListForSetting">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SERAccountListForSetting" nillable="true" type="tns:SERAccountListForSetting" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCommoditySettingByOwnerAndAccountTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommoditySettingByOwnerAndAccountTypeResult" type="tns:ArrayOfSERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommoditySetting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommoditySettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommoditySettingResult" type="tns:SERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeCommoditySettingStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeCommoditySettingStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeCommoditySettingStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommodityNeutralInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccountGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommodityNeutralInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommodityNeutralInsertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeCommodityNeutralStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeCommodityNeutralStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeCommodityNeutralStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommodityNeutral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommodityNeutralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommodityNeutralResult" type="tns:SERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommodityNeutralByOwnerAndAccountType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCommodityNeutralByOwnerAndAccountTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCommodityNeutralByOwnerAndAccountTypeResult" type="tns:ArrayOfSERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedInsert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AccountGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AssignedInsertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AssignedInsertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeAssignedStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="UpdatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeAssignedStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeAssignedStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssigned">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="guid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedResult" type="tns:SERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedByOwnerAndAccountType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OwnerGuid" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountTypeGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAssignedByOwnerAndAccountTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAssignedByOwnerAndAccountTypeResult" type="tns:ArrayOfSERAccountListForSetting" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Settlement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SettlementResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PrepareBalanceInstruction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="BalanceType" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedBy" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PrepareBalanceInstructionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PrepareBalanceInstructionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SettlementCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SettlementCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SettlementCheckResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="UserGuid" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ClearOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearOrderResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Orders" type="tns:ArrayOfCOrder" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsSelfTrade" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsNCM" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCOrder">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="COrder" nillable="true" type="tns:COrder" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="COrder">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SellMemberGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyMemberGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="SellClientGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyClientGuid" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="WarehouseReceipt" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="SoldQuantity" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckOrdersResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Exists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExistsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredMemberTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredMemberTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFillteredMemberTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredIFMemberTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredIFMemberTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFillteredIFMemberTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredClientTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredClientTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFillteredClientTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredIFClientTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredIFClientTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFillteredIFClientTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredNCMTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TradeDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFillteredNCMTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFillteredNCMTradeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoadAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadAccount" />
+  </wsdl:message>
+  <wsdl:message name="LoadAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPayInAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientPayInAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPayInAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientPayInAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPayInAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberPayInAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPayInAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberPayInAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPayOutAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClientPayOutAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetClientPayOutAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClientPayOutAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPayOutAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberPayOutAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPayOutAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberPayOutAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClearingPayInAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClearingPayInAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetClearingPayInAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClearingPayInAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClearingPayOutAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClearingPayOutAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetClearingPayOutAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClearingPayOutAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsClientPayInAccountsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsClientPayInAccountsExists" />
+  </wsdl:message>
+  <wsdl:message name="IsClientPayInAccountsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsClientPayInAccountsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsMemberPayInAccountsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsMemberPayInAccountsExists" />
+  </wsdl:message>
+  <wsdl:message name="IsMemberPayInAccountsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsMemberPayInAccountsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsMemberPayOutAccountsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsMemberPayOutAccountsExists" />
+  </wsdl:message>
+  <wsdl:message name="IsMemberPayOutAccountsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsMemberPayOutAccountsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsClientPayOutAccountsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsClientPayOutAccountsExists" />
+  </wsdl:message>
+  <wsdl:message name="IsClientPayOutAccountsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsClientPayOutAccountsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsClearingPayInAccountsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:IsClearingPayInAccountsExists" />
+  </wsdl:message>
+  <wsdl:message name="IsClearingPayInAccountsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:IsClearingPayInAccountsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertAccount" />
+  </wsdl:message>
+  <wsdl:message name="InsertAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAccountStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAccountStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveAccountByOwnerAndTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetActiveAccountByOwnerAndType" />
+  </wsdl:message>
+  <wsdl:message name="GetActiveAccountByOwnerAndTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetActiveAccountByOwnerAndTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="OwnBothClientPayInAndPayOutSoapIn">
+    <wsdl:part name="parameters" element="tns:OwnBothClientPayInAndPayOut" />
+  </wsdl:message>
+  <wsdl:message name="OwnBothClientPayInAndPayOutSoapOut">
+    <wsdl:part name="parameters" element="tns:OwnBothClientPayInAndPayOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="OwnAccountTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:OwnAccountType" />
+  </wsdl:message>
+  <wsdl:message name="OwnAccountTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:OwnAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePrioritySoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePriority" />
+  </wsdl:message>
+  <wsdl:message name="ChangePrioritySoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActiveECXSettlementAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllActiveECXSettlementAccounts" />
+  </wsdl:message>
+  <wsdl:message name="GetAllActiveECXSettlementAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllActiveECXSettlementAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayInRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:PayInRequest" />
+  </wsdl:message>
+  <wsdl:message name="PayInRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:PayInRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOutRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:PayOutRequest" />
+  </wsdl:message>
+  <wsdl:message name="PayOutRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:PayOutRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="BalanceRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:BalanceRequest" />
+  </wsdl:message>
+  <wsdl:message name="BalanceRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:BalanceRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayInResponceSoapIn">
+    <wsdl:part name="parameters" element="tns:PayInResponce" />
+  </wsdl:message>
+  <wsdl:message name="PayInResponceSoapOut">
+    <wsdl:part name="parameters" element="tns:PayInResponceResponse" />
+  </wsdl:message>
+  <wsdl:message name="PayOutResponceSoapIn">
+    <wsdl:part name="parameters" element="tns:PayOutResponce" />
+  </wsdl:message>
+  <wsdl:message name="PayOutResponceSoapOut">
+    <wsdl:part name="parameters" element="tns:PayOutResponceResponse" />
+  </wsdl:message>
+  <wsdl:message name="BalanceResponceSoapIn">
+    <wsdl:part name="parameters" element="tns:BalanceResponce" />
+  </wsdl:message>
+  <wsdl:message name="BalanceResponceSoapOut">
+    <wsdl:part name="parameters" element="tns:BalanceResponceResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionsInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionsInsert" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionsInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionsInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionsExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionsExists" />
+  </wsdl:message>
+  <wsdl:message name="AuthorizeTransactionsExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:AuthorizeTransactionsExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommoditySettingInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:CommoditySettingInsert" />
+  </wsdl:message>
+  <wsdl:message name="CommoditySettingInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:CommoditySettingInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommoditySettingByOwnerAndAccountTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommoditySettingByOwnerAndAccountType" />
+  </wsdl:message>
+  <wsdl:message name="GetCommoditySettingByOwnerAndAccountTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommoditySettingByOwnerAndAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommoditySettingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommoditySetting" />
+  </wsdl:message>
+  <wsdl:message name="GetCommoditySettingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommoditySettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeCommoditySettingStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeCommoditySettingStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChangeCommoditySettingStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeCommoditySettingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommodityNeutralInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:CommodityNeutralInsert" />
+  </wsdl:message>
+  <wsdl:message name="CommodityNeutralInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:CommodityNeutralInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeCommodityNeutralStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeCommodityNeutralStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChangeCommodityNeutralStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeCommodityNeutralStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityNeutralSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommodityNeutral" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityNeutralSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommodityNeutralResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityNeutralByOwnerAndAccountTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCommodityNeutralByOwnerAndAccountType" />
+  </wsdl:message>
+  <wsdl:message name="GetCommodityNeutralByOwnerAndAccountTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCommodityNeutralByOwnerAndAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AssignedInsertSoapIn">
+    <wsdl:part name="parameters" element="tns:AssignedInsert" />
+  </wsdl:message>
+  <wsdl:message name="AssignedInsertSoapOut">
+    <wsdl:part name="parameters" element="tns:AssignedInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAssignedStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeAssignedStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChangeAssignedStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeAssignedStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssigned" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedByOwnerAndAccountTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAssignedByOwnerAndAccountType" />
+  </wsdl:message>
+  <wsdl:message name="GetAssignedByOwnerAndAccountTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAssignedByOwnerAndAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettlementSoapIn">
+    <wsdl:part name="parameters" element="tns:Settlement" />
+  </wsdl:message>
+  <wsdl:message name="SettlementSoapOut">
+    <wsdl:part name="parameters" element="tns:SettlementResponse" />
+  </wsdl:message>
+  <wsdl:message name="PrepareBalanceInstructionSoapIn">
+    <wsdl:part name="parameters" element="tns:PrepareBalanceInstruction" />
+  </wsdl:message>
+  <wsdl:message name="PrepareBalanceInstructionSoapOut">
+    <wsdl:part name="parameters" element="tns:PrepareBalanceInstructionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SettlementCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:SettlementCheck" />
+  </wsdl:message>
+  <wsdl:message name="SettlementCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:SettlementCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearOrder" />
+  </wsdl:message>
+  <wsdl:message name="ClearOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckOrders" />
+  </wsdl:message>
+  <wsdl:message name="CheckOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:Exists" />
+  </wsdl:message>
+  <wsdl:message name="ExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredMemberTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFillteredMemberTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredMemberTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFillteredMemberTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredIFMemberTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFillteredIFMemberTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredIFMemberTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFillteredIFMemberTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredClientTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFillteredClientTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredClientTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFillteredClientTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredIFClientTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFillteredIFClientTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredIFClientTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFillteredIFClientTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredNCMTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFillteredNCMTrade" />
+  </wsdl:message>
+  <wsdl:message name="GetFillteredNCMTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFillteredNCMTradeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CNSServiceSoap">
+    <wsdl:operation name="LoadAccount">
+      <wsdl:input message="tns:LoadAccountSoapIn" />
+      <wsdl:output message="tns:LoadAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayInAccounts">
+      <wsdl:input message="tns:GetClientPayInAccountsSoapIn" />
+      <wsdl:output message="tns:GetClientPayInAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayInAccounts">
+      <wsdl:input message="tns:GetMemberPayInAccountsSoapIn" />
+      <wsdl:output message="tns:GetMemberPayInAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayOutAccounts">
+      <wsdl:input message="tns:GetClientPayOutAccountsSoapIn" />
+      <wsdl:output message="tns:GetClientPayOutAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayOutAccounts">
+      <wsdl:input message="tns:GetMemberPayOutAccountsSoapIn" />
+      <wsdl:output message="tns:GetMemberPayOutAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayInAccounts">
+      <wsdl:input message="tns:GetClearingPayInAccountsSoapIn" />
+      <wsdl:output message="tns:GetClearingPayInAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayOutAccounts">
+      <wsdl:input message="tns:GetClearingPayOutAccountsSoapIn" />
+      <wsdl:output message="tns:GetClearingPayOutAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayInAccountsExists">
+      <wsdl:input message="tns:IsClientPayInAccountsExistsSoapIn" />
+      <wsdl:output message="tns:IsClientPayInAccountsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayInAccountsExists">
+      <wsdl:input message="tns:IsMemberPayInAccountsExistsSoapIn" />
+      <wsdl:output message="tns:IsMemberPayInAccountsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayOutAccountsExists">
+      <wsdl:input message="tns:IsMemberPayOutAccountsExistsSoapIn" />
+      <wsdl:output message="tns:IsMemberPayOutAccountsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayOutAccountsExists">
+      <wsdl:input message="tns:IsClientPayOutAccountsExistsSoapIn" />
+      <wsdl:output message="tns:IsClientPayOutAccountsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsClearingPayInAccountsExists">
+      <wsdl:input message="tns:IsClearingPayInAccountsExistsSoapIn" />
+      <wsdl:output message="tns:IsClearingPayInAccountsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertAccount">
+      <wsdl:input message="tns:InsertAccountSoapIn" />
+      <wsdl:output message="tns:InsertAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountStatus">
+      <wsdl:input message="tns:UpdateAccountStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAccountStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveAccountByOwnerAndType">
+      <wsdl:input message="tns:GetActiveAccountByOwnerAndTypeSoapIn" />
+      <wsdl:output message="tns:GetActiveAccountByOwnerAndTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OwnBothClientPayInAndPayOut">
+      <wsdl:input message="tns:OwnBothClientPayInAndPayOutSoapIn" />
+      <wsdl:output message="tns:OwnBothClientPayInAndPayOutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OwnAccountType">
+      <wsdl:input message="tns:OwnAccountTypeSoapIn" />
+      <wsdl:output message="tns:OwnAccountTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePriority">
+      <wsdl:input message="tns:ChangePrioritySoapIn" />
+      <wsdl:output message="tns:ChangePrioritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveECXSettlementAccounts">
+      <wsdl:input message="tns:GetAllActiveECXSettlementAccountsSoapIn" />
+      <wsdl:output message="tns:GetAllActiveECXSettlementAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccount">
+      <wsdl:input message="tns:GetBankAccountSoapIn" />
+      <wsdl:output message="tns:GetBankAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayInRequest">
+      <wsdl:input message="tns:PayInRequestSoapIn" />
+      <wsdl:output message="tns:PayInRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayOutRequest">
+      <wsdl:input message="tns:PayOutRequestSoapIn" />
+      <wsdl:output message="tns:PayOutRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceRequest">
+      <wsdl:input message="tns:BalanceRequestSoapIn" />
+      <wsdl:output message="tns:BalanceRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayInResponce">
+      <wsdl:input message="tns:PayInResponceSoapIn" />
+      <wsdl:output message="tns:PayInResponceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PayOutResponce">
+      <wsdl:input message="tns:PayOutResponceSoapIn" />
+      <wsdl:output message="tns:PayOutResponceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BalanceResponce">
+      <wsdl:input message="tns:BalanceResponceSoapIn" />
+      <wsdl:output message="tns:BalanceResponceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <wsdl:input message="tns:AuthorizeTransactionSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsInsert">
+      <wsdl:input message="tns:AuthorizeTransactionsInsertSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionsInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsExists">
+      <wsdl:input message="tns:AuthorizeTransactionsExistsSoapIn" />
+      <wsdl:output message="tns:AuthorizeTransactionsExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommoditySettingInsert">
+      <wsdl:input message="tns:CommoditySettingInsertSoapIn" />
+      <wsdl:output message="tns:CommoditySettingInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySettingByOwnerAndAccountType">
+      <wsdl:input message="tns:GetCommoditySettingByOwnerAndAccountTypeSoapIn" />
+      <wsdl:output message="tns:GetCommoditySettingByOwnerAndAccountTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySetting">
+      <wsdl:input message="tns:GetCommoditySettingSoapIn" />
+      <wsdl:output message="tns:GetCommoditySettingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommoditySettingStatus">
+      <wsdl:input message="tns:ChangeCommoditySettingStatusSoapIn" />
+      <wsdl:output message="tns:ChangeCommoditySettingStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommodityNeutralInsert">
+      <wsdl:input message="tns:CommodityNeutralInsertSoapIn" />
+      <wsdl:output message="tns:CommodityNeutralInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommodityNeutralStatus">
+      <wsdl:input message="tns:ChangeCommodityNeutralStatusSoapIn" />
+      <wsdl:output message="tns:ChangeCommodityNeutralStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutral">
+      <wsdl:input message="tns:GetCommodityNeutralSoapIn" />
+      <wsdl:output message="tns:GetCommodityNeutralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutralByOwnerAndAccountType">
+      <wsdl:input message="tns:GetCommodityNeutralByOwnerAndAccountTypeSoapIn" />
+      <wsdl:output message="tns:GetCommodityNeutralByOwnerAndAccountTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AssignedInsert">
+      <wsdl:input message="tns:AssignedInsertSoapIn" />
+      <wsdl:output message="tns:AssignedInsertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAssignedStatus">
+      <wsdl:input message="tns:ChangeAssignedStatusSoapIn" />
+      <wsdl:output message="tns:ChangeAssignedStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssigned">
+      <wsdl:input message="tns:GetAssignedSoapIn" />
+      <wsdl:output message="tns:GetAssignedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedByOwnerAndAccountType">
+      <wsdl:input message="tns:GetAssignedByOwnerAndAccountTypeSoapIn" />
+      <wsdl:output message="tns:GetAssignedByOwnerAndAccountTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Settlement">
+      <wsdl:input message="tns:SettlementSoapIn" />
+      <wsdl:output message="tns:SettlementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PrepareBalanceInstruction">
+      <wsdl:input message="tns:PrepareBalanceInstructionSoapIn" />
+      <wsdl:output message="tns:PrepareBalanceInstructionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SettlementCheck">
+      <wsdl:input message="tns:SettlementCheckSoapIn" />
+      <wsdl:output message="tns:SettlementCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearOrder">
+      <wsdl:input message="tns:ClearOrderSoapIn" />
+      <wsdl:output message="tns:ClearOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrders">
+      <wsdl:input message="tns:CheckOrdersSoapIn" />
+      <wsdl:output message="tns:CheckOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <wsdl:input message="tns:ExistsSoapIn" />
+      <wsdl:output message="tns:ExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredMemberTrade">
+      <wsdl:input message="tns:GetFillteredMemberTradeSoapIn" />
+      <wsdl:output message="tns:GetFillteredMemberTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFMemberTrade">
+      <wsdl:input message="tns:GetFillteredIFMemberTradeSoapIn" />
+      <wsdl:output message="tns:GetFillteredIFMemberTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredClientTrade">
+      <wsdl:input message="tns:GetFillteredClientTradeSoapIn" />
+      <wsdl:output message="tns:GetFillteredClientTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFClientTrade">
+      <wsdl:input message="tns:GetFillteredIFClientTradeSoapIn" />
+      <wsdl:output message="tns:GetFillteredIFClientTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredNCMTrade">
+      <wsdl:input message="tns:GetFillteredNCMTradeSoapIn" />
+      <wsdl:output message="tns:GetFillteredNCMTradeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CNSServiceSoap" type="tns:CNSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadAccount">
+      <soap:operation soapAction="http://tempuri.org/LoadAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayInAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetClientPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayInAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetMemberPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayOutAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetClientPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayOutAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetMemberPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayInAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetClearingPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayOutAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetClearingPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayInAccountsExists">
+      <soap:operation soapAction="http://tempuri.org/IsClientPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayInAccountsExists">
+      <soap:operation soapAction="http://tempuri.org/IsMemberPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayOutAccountsExists">
+      <soap:operation soapAction="http://tempuri.org/IsMemberPayOutAccountsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayOutAccountsExists">
+      <soap:operation soapAction="http://tempuri.org/IsClientPayOutAccountsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClearingPayInAccountsExists">
+      <soap:operation soapAction="http://tempuri.org/IsClearingPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAccount">
+      <soap:operation soapAction="http://tempuri.org/InsertAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateAccountStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveAccountByOwnerAndType">
+      <soap:operation soapAction="http://tempuri.org/GetActiveAccountByOwnerAndType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OwnBothClientPayInAndPayOut">
+      <soap:operation soapAction="http://tempuri.org/OwnBothClientPayInAndPayOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OwnAccountType">
+      <soap:operation soapAction="http://tempuri.org/OwnAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePriority">
+      <soap:operation soapAction="http://tempuri.org/ChangePriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveECXSettlementAccounts">
+      <soap:operation soapAction="http://tempuri.org/GetAllActiveECXSettlementAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccount">
+      <soap:operation soapAction="http://tempuri.org/GetBankAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayInRequest">
+      <soap:operation soapAction="http://tempuri.org/PayInRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOutRequest">
+      <soap:operation soapAction="http://tempuri.org/PayOutRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceRequest">
+      <soap:operation soapAction="http://tempuri.org/BalanceRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayInResponce">
+      <soap:operation soapAction="http://tempuri.org/PayInResponce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOutResponce">
+      <soap:operation soapAction="http://tempuri.org/PayOutResponce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceResponce">
+      <soap:operation soapAction="http://tempuri.org/BalanceResponce" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <soap:operation soapAction="http://tempuri.org/AuthorizeTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsInsert">
+      <soap:operation soapAction="http://tempuri.org/AuthorizeTransactionsInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsExists">
+      <soap:operation soapAction="http://tempuri.org/AuthorizeTransactionsExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommoditySettingInsert">
+      <soap:operation soapAction="http://tempuri.org/CommoditySettingInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySettingByOwnerAndAccountType">
+      <soap:operation soapAction="http://tempuri.org/GetCommoditySettingByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySetting">
+      <soap:operation soapAction="http://tempuri.org/GetCommoditySetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommoditySettingStatus">
+      <soap:operation soapAction="http://tempuri.org/ChangeCommoditySettingStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommodityNeutralInsert">
+      <soap:operation soapAction="http://tempuri.org/CommodityNeutralInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommodityNeutralStatus">
+      <soap:operation soapAction="http://tempuri.org/ChangeCommodityNeutralStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutral">
+      <soap:operation soapAction="http://tempuri.org/GetCommodityNeutral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutralByOwnerAndAccountType">
+      <soap:operation soapAction="http://tempuri.org/GetCommodityNeutralByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedInsert">
+      <soap:operation soapAction="http://tempuri.org/AssignedInsert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAssignedStatus">
+      <soap:operation soapAction="http://tempuri.org/ChangeAssignedStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssigned">
+      <soap:operation soapAction="http://tempuri.org/GetAssigned" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedByOwnerAndAccountType">
+      <soap:operation soapAction="http://tempuri.org/GetAssignedByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Settlement">
+      <soap:operation soapAction="http://tempuri.org/Settlement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareBalanceInstruction">
+      <soap:operation soapAction="http://tempuri.org/PrepareBalanceInstruction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettlementCheck">
+      <soap:operation soapAction="http://tempuri.org/SettlementCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearOrder">
+      <soap:operation soapAction="http://tempuri.org/ClearOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrders">
+      <soap:operation soapAction="http://tempuri.org/CheckOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <soap:operation soapAction="http://tempuri.org/Exists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredMemberTrade">
+      <soap:operation soapAction="http://tempuri.org/GetFillteredMemberTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFMemberTrade">
+      <soap:operation soapAction="http://tempuri.org/GetFillteredIFMemberTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredClientTrade">
+      <soap:operation soapAction="http://tempuri.org/GetFillteredClientTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFClientTrade">
+      <soap:operation soapAction="http://tempuri.org/GetFillteredIFClientTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredNCMTrade">
+      <soap:operation soapAction="http://tempuri.org/GetFillteredNCMTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CNSServiceSoap12" type="tns:CNSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="LoadAccount">
+      <soap12:operation soapAction="http://tempuri.org/LoadAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayInAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetClientPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayInAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClientPayOutAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetClientPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPayOutAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayInAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetClearingPayInAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClearingPayOutAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetClearingPayOutAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayInAccountsExists">
+      <soap12:operation soapAction="http://tempuri.org/IsClientPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayInAccountsExists">
+      <soap12:operation soapAction="http://tempuri.org/IsMemberPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsMemberPayOutAccountsExists">
+      <soap12:operation soapAction="http://tempuri.org/IsMemberPayOutAccountsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClientPayOutAccountsExists">
+      <soap12:operation soapAction="http://tempuri.org/IsClientPayOutAccountsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsClearingPayInAccountsExists">
+      <soap12:operation soapAction="http://tempuri.org/IsClearingPayInAccountsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertAccount">
+      <soap12:operation soapAction="http://tempuri.org/InsertAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccountStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAccountStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActiveAccountByOwnerAndType">
+      <soap12:operation soapAction="http://tempuri.org/GetActiveAccountByOwnerAndType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OwnBothClientPayInAndPayOut">
+      <soap12:operation soapAction="http://tempuri.org/OwnBothClientPayInAndPayOut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OwnAccountType">
+      <soap12:operation soapAction="http://tempuri.org/OwnAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePriority">
+      <soap12:operation soapAction="http://tempuri.org/ChangePriority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllActiveECXSettlementAccounts">
+      <soap12:operation soapAction="http://tempuri.org/GetAllActiveECXSettlementAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccount">
+      <soap12:operation soapAction="http://tempuri.org/GetBankAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayInRequest">
+      <soap12:operation soapAction="http://tempuri.org/PayInRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOutRequest">
+      <soap12:operation soapAction="http://tempuri.org/PayOutRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceRequest">
+      <soap12:operation soapAction="http://tempuri.org/BalanceRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayInResponce">
+      <soap12:operation soapAction="http://tempuri.org/PayInResponce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PayOutResponce">
+      <soap12:operation soapAction="http://tempuri.org/PayOutResponce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BalanceResponce">
+      <soap12:operation soapAction="http://tempuri.org/BalanceResponce" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransaction">
+      <soap12:operation soapAction="http://tempuri.org/AuthorizeTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsInsert">
+      <soap12:operation soapAction="http://tempuri.org/AuthorizeTransactionsInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthorizeTransactionsExists">
+      <soap12:operation soapAction="http://tempuri.org/AuthorizeTransactionsExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommoditySettingInsert">
+      <soap12:operation soapAction="http://tempuri.org/CommoditySettingInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySettingByOwnerAndAccountType">
+      <soap12:operation soapAction="http://tempuri.org/GetCommoditySettingByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommoditySetting">
+      <soap12:operation soapAction="http://tempuri.org/GetCommoditySetting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommoditySettingStatus">
+      <soap12:operation soapAction="http://tempuri.org/ChangeCommoditySettingStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommodityNeutralInsert">
+      <soap12:operation soapAction="http://tempuri.org/CommodityNeutralInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeCommodityNeutralStatus">
+      <soap12:operation soapAction="http://tempuri.org/ChangeCommodityNeutralStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutral">
+      <soap12:operation soapAction="http://tempuri.org/GetCommodityNeutral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCommodityNeutralByOwnerAndAccountType">
+      <soap12:operation soapAction="http://tempuri.org/GetCommodityNeutralByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AssignedInsert">
+      <soap12:operation soapAction="http://tempuri.org/AssignedInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAssignedStatus">
+      <soap12:operation soapAction="http://tempuri.org/ChangeAssignedStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssigned">
+      <soap12:operation soapAction="http://tempuri.org/GetAssigned" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignedByOwnerAndAccountType">
+      <soap12:operation soapAction="http://tempuri.org/GetAssignedByOwnerAndAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Settlement">
+      <soap12:operation soapAction="http://tempuri.org/Settlement" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrepareBalanceInstruction">
+      <soap12:operation soapAction="http://tempuri.org/PrepareBalanceInstruction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SettlementCheck">
+      <soap12:operation soapAction="http://tempuri.org/SettlementCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearOrder">
+      <soap12:operation soapAction="http://tempuri.org/ClearOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOrders">
+      <soap12:operation soapAction="http://tempuri.org/CheckOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exists">
+      <soap12:operation soapAction="http://tempuri.org/Exists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredMemberTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetFillteredMemberTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFMemberTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetFillteredIFMemberTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredClientTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetFillteredClientTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredIFClientTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetFillteredIFClientTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFillteredNCMTrade">
+      <soap12:operation soapAction="http://tempuri.org/GetFillteredNCMTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CNSService">
+    <wsdl:port name="CNSServiceSoap" binding="tns:CNSServiceSoap">
+      <soap:address location="http://10.1.5.20:5000/CNSService/CNSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CNSServiceSoap12" binding="tns:CNSServiceSoap12">
+      <soap12:address location="http://10.1.5.20:5000/CNSService/CNSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

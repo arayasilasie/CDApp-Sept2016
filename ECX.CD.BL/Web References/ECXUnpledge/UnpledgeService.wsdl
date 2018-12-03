@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://unpledge/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UnpledgeService" targetNamespace="http://unpledge/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.1.5.11:8080/ECXWRFWS-war/UnpledgeService?xsd=1" namespace="http://unpledge/" />
+    </xsd:schema>
+  </types>
+  <message name="getAllUnpledgeRequest">
+    <part name="parameters" element="tns:getAllUnpledgeRequest" />
+  </message>
+  <message name="getAllUnpledgeRequestResponse">
+    <part name="parameters" element="tns:getAllUnpledgeRequestResponse" />
+  </message>
+  <message name="getUnPledgeRequestByBank">
+    <part name="parameters" element="tns:getUnPledgeRequestByBank" />
+  </message>
+  <message name="getUnPledgeRequestByBankResponse">
+    <part name="parameters" element="tns:getUnPledgeRequestByBankResponse" />
+  </message>
+  <message name="authoriazeUnpledgeResponce">
+    <part name="parameters" element="tns:authoriazeUnpledgeResponce" />
+  </message>
+  <message name="authoriazeUnpledgeResponceResponse">
+    <part name="parameters" element="tns:authoriazeUnpledgeResponceResponse" />
+  </message>
+  <message name="getNewLNSRequest">
+    <part name="parameters" element="tns:getNewLNSRequest" />
+  </message>
+  <message name="getNewLNSRequestResponse">
+    <part name="parameters" element="tns:getNewLNSRequestResponse" />
+  </message>
+  <portType name="Unpledge">
+    <operation name="getAllUnpledgeRequest">
+      <input message="tns:getAllUnpledgeRequest" />
+      <output message="tns:getAllUnpledgeRequestResponse" />
+    </operation>
+    <operation name="getUnPledgeRequestByBank">
+      <input message="tns:getUnPledgeRequestByBank" />
+      <output message="tns:getUnPledgeRequestByBankResponse" />
+    </operation>
+    <operation name="authoriazeUnpledgeResponce">
+      <input message="tns:authoriazeUnpledgeResponce" />
+      <output message="tns:authoriazeUnpledgeResponceResponse" />
+    </operation>
+    <operation name="getNewLNSRequest">
+      <input message="tns:getNewLNSRequest" />
+      <output message="tns:getNewLNSRequestResponse" />
+    </operation>
+  </portType>
+  <binding name="UnpledgePortBinding" type="tns:Unpledge">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAllUnpledgeRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getUnPledgeRequestByBank">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="authoriazeUnpledgeResponce">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNewLNSRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UnpledgeService">
+    <port name="UnpledgePort" binding="tns:UnpledgePortBinding">
+      <soap:address location="http://10.1.5.11:8080/ECXWRFWS-war/UnpledgeService" />
+    </port>
+  </service>
+</definitions>

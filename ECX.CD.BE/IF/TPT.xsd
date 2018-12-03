@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TPT" targetNamespace="http://tempuri.org/TPT.xsd" xmlns:mstns="http://tempuri.org/TPT.xsd" xmlns="http://tempuri.org/TPT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TPT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="TPT" msprop:Generator_UserDSName="TPT" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TitleTransfer" msprop:Generator_UserTableName="TitleTransfer" msprop:Generator_RowDeletedName="TitleTransferRowDeleted" msprop:Generator_TableClassName="TitleTransferDataTable" msprop:Generator_RowChangedName="TitleTransferRowChanged" msprop:Generator_RowClassName="TitleTransferRow" msprop:Generator_RowChangingName="TitleTransferRowChanging" msprop:Generator_RowEvArgName="TitleTransferRowChangeEvent" msprop:Generator_RowEvHandlerName="TitleTransferRowChangeEventHandler" msprop:Generator_TablePropName="TitleTransfer" msprop:Generator_TableVarName="tableTitleTransfer" msprop:Generator_RowDeletingName="TitleTransferRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="WRId" msprop:Generator_UserColumnName="WRId" msprop:Generator_ColumnPropNameInRow="WRId" msprop:Generator_ColumnVarNameInTable="columnWRId" msprop:Generator_ColumnPropNameInTable="WRIdColumn" type="xs:int" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" />
+              <xs:element name="BankBranchId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="BankBranchId" msprop:Generator_ColumnPropNameInRow="BankBranchId" msprop:Generator_ColumnVarNameInTable="columnBankBranchId" msprop:Generator_ColumnPropNameInTable="BankBranchIdColumn" type="xs:string" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TitleTransferRequestRejected" msprop:Generator_UserTableName="TitleTransferRequestRejected" msprop:Generator_RowDeletedName="TitleTransferRequestRejectedRowDeleted" msprop:Generator_TableClassName="TitleTransferRequestRejectedDataTable" msprop:Generator_RowChangedName="TitleTransferRequestRejectedRowChanged" msprop:Generator_RowClassName="TitleTransferRequestRejectedRow" msprop:Generator_RowChangingName="TitleTransferRequestRejectedRowChanging" msprop:Generator_RowEvArgName="TitleTransferRequestRejectedRowChangeEvent" msprop:Generator_RowEvHandlerName="TitleTransferRequestRejectedRowChangeEventHandler" msprop:Generator_TablePropName="TitleTransferRequestRejected" msprop:Generator_TableVarName="tableTitleTransferRequestRejected" msprop:Generator_RowDeletingName="TitleTransferRequestRejectedRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="TitleTransferRequestId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TitleTransferRequestId" msprop:Generator_ColumnPropNameInRow="TitleTransferRequestId" msprop:Generator_ColumnVarNameInTable="columnTitleTransferRequestId" msprop:Generator_ColumnPropNameInTable="TitleTransferRequestIdColumn" type="xs:string" />
+              <xs:element name="RejectionReasonCode" msprop:Generator_UserColumnName="RejectionReasonCode" msprop:Generator_ColumnPropNameInRow="RejectionReasonCode" msprop:Generator_ColumnVarNameInTable="columnRejectionReasonCode" msprop:Generator_ColumnPropNameInTable="RejectionReasonCodeColumn" type="xs:int" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TitleTransfer" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="TitleTransferRequestRejected_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TitleTransferRequestRejected" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

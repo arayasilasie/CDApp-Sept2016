@@ -1,0 +1,280 @@
+﻿<html>
+<head>
+    <title>My Select-Move Control</title>
+
+    <script type="text/javascript">
+
+    //function to select rows from the Left Table
+    function SelectRow(tblTable)
+    {
+        var SelectedRow = tblTable.srcElement.parentNode;
+        
+        //this condition checks for the header row
+        if((SelectedRow.id!="tblLeftTr1"))
+        {
+            if(SelectedRow.style.backgroundColor == "#ffeeff")  //is selected ?
+            {
+                SelectedRow.style.backgroundColor = "white";    //deselect
+            }
+            else
+            {
+                SelectedRow.style.backgroundColor = "#ffeeff";  //select
+            }   
+        }
+    }
+
+    //function to select rows from the Right Table (only one row can be selected here)
+    function SelectRowRight(tblTable)
+    {
+        var SelectedRow = tblTable.srcElement.parentNode;
+        
+        //this condition checks for the header row
+        if((SelectedRow.id!="tblRightTr1") )
+        {
+            if(SelectedRow.style.backgroundColor == "#ffeeff")  //is selected ?
+            {
+                SelectedRow.style.backgroundColor = "white";    //deselect
+            }
+            else
+            {
+                SelectedRow.style.backgroundColor = "#ffeeff";  //select
+            }   
+        }
+        
+        var i=0;
+        var RightTable = document.getElementById("tblRight");
+        
+        //this loop prevents from selecting multiple rows
+        for(i=1; i<RightTable.rows.length; i++)
+        {
+            if(RightTable.rows[i].id == SelectedRow.id)
+            {
+            }
+            else
+            {
+                RightTable.rows[i].style.backgroundColor = "white";
+            }
+        }
+    }
+   
+    //function to add selected rows from Left Table to Right Table
+    function AddRows()
+    {
+        var LeftTable = document.getElementById("tblLeft");    
+        var RightTable = document.getElementById("tblRight");    
+        var i=0;
+        var j=0;
+        var RowPresent = 0; //this variable checks if a row is already added to the Right Table
+        
+        for(i=0; i<LeftTable.rows.length; i++)
+        {
+            if(LeftTable.rows[i].style.backgroundColor == "#ffeeff")
+            {
+                for(j=0; j<RightTable.rows.length; j++)
+                {
+                    if(RightTable.rows[j].id == ("RightRow"+i))
+                    {
+                        RowPresent=1;
+                    }
+                }
+                
+                //this code adds the selected rows to Right Table if not already added
+                if(RowPresent==0)   
+                {
+                    RightRow=RightTable.insertRow();
+                    RightRow.id = "RightRow"+i;
+                    RightCell1=RightRow.insertCell();
+                    RightCell1.align = "left";
+                    RightCell2 = RightRow.insertCell();
+                    RightCell2.align = "left";
+                    
+                    RightCell1.innerHTML = LeftTable.rows[i].childNodes[0].innerHTML;
+                    RightCell2.innerHTML = LeftTable.rows[i].childNodes[1].innerHTML;
+                }
+            }
+        }
+    }
+
+    //function to remove selected rows from the Right Table
+    function RemoveRows()
+    {
+        var RightTable = document.getElementById("tblRight");    
+        var i=0;
+    
+        for(i=0; i<RightTable.rows.length; i++)
+        {
+            if(RightTable.rows[i].style.backgroundColor == "#ffeeff")   //is selected ?
+            {
+                DeleteRow(RightTable.rows[i]);
+            }
+        }
+    }
+    
+    //function to delete a row from Right Table
+    function DeleteRow(RowToDelete)
+    {
+        RowToDelete.parentNode.removeChild(RowToDelete);
+        RemoveRows();
+    }
+
+    //function to select a row from Right Table to move up
+    function MoveUp()
+    {
+        var RightTable = document.getElementById("tblRight");
+        var i=0;
+    
+        for(i=2; i<RightTable.rows.length; i++)
+        {
+            if(RightTable.rows[i].style.backgroundColor == "#ffeeff")   //is selected ?
+            {
+                SendUp(RightTable.rows[i],RightTable.rows[i-1]);
+            }
+        }
+    }
+    
+    //function to move up the selected row
+    function SendUp(CurrentRow,PreviousRow)
+    {
+        PreviousRow.parentNode.insertBefore(CurrentRow,PreviousRow);
+    }
+
+    //function to select a row from Right Table to move down
+    function MoveDown()
+    {
+        var RightTable = document.getElementById("tblRight");
+        var i=0;
+        var RowToMove=0;
+        var PreviousRow;
+        var CurrentRow;
+        
+        for(i=1; i<RightTable.rows.length-1; i++)
+        {
+            if(RightTable.rows[i].style.backgroundColor == "#ffeeff")
+            {
+                RightTable.rows[i];
+                
+                RowToMove = i;
+                
+                //appends the selected row to the end of the Right Table
+                RightTable.rows[i].parentNode.appendChild(RightTable.rows[i]);
+                
+                //this code moves the appended row up till it reaches 
+                //to one position less than its original position
+                for(i=RightTable.rows.length-1; i>RowToMove+1; i--)
+                {
+                    CurrentRow = RightTable.rows[i];
+                    PreviousRow = RightTable.rows[i-1];
+                    
+                    SendUp(CurrentRow, PreviousRow);
+                }
+            }
+        }        
+    }    
+    
+    </script>
+
+</head>
+<body>
+    <table cellspacing="0" style="width: 100%">
+        <tr>
+            <td colspan="4">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" style="font-weight: bold; vertical-align: top; font-size: 9pt; text-align: left">
+                Student List</td>
+            <td style="vertical-align: top">
+            </td>
+            <td style="font-weight: bold; vertical-align: top; text-align: left; font-size: 9pt;">
+                Selected Students</td>
+            <td style="vertical-align: top">
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top">
+                <table id="tblLeft" onclick="SelectRow(event)" style="border: solid 1px black; width: 100%;
+                    font-size: 9pt; color: black; font-family: Verdana;" cellspacing="0">
+                    <tr id="tblLeftTr1" style="background-color: #6F3752; color: White;">
+                        <td style="font-weight: bold; width: 100px; border-bottom: solid 1px black;" align="left">
+                            Student ID</td>
+                        <td style="font-weight: bold; width: 100px; border-bottom: solid 1px black;" align="left">
+                            Student Name</td>
+                    </tr>
+                    <tr id="tblLeftTr2">
+                        <td align="left" style="width: 100px">
+                            S001</td>
+                        <td align="left" style="width: 100px">
+                            Nishant Sagar</td>
+                    </tr>
+                    <tr id="tblLeftTr3">
+                        <td align="left" style="width: 100px">
+                            S002</td>
+                        <td align="left" style="width: 100px">
+                            Pankaj Patel</td>
+                    </tr>
+                    <tr id="tblLeftTr4">
+                        <td align="left" style="width: 100px">
+                            S003</td>
+                        <td align="left" style="width: 100px">
+                            Paresh Patel</td>
+                    </tr>
+                    <tr id="tblLeftTr5">
+                        <td align="left" style="width: 100px">
+                            S004</td>
+                        <td align="left" style="width: 100px">
+                            Shailesh Bhindi</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align: top">
+                <table>
+                    <tr>
+                        <td>
+                            <input id="btnAdd" style="width: 30px; color: white; background-color: #6f3752; font-size: 9pt;
+                                border: solid 1px black;" onclick="AddRows()" type="button" value=">" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="btnRemove" style="width: 30px; color: white; background-color: #6f3752;
+                                font-size: 9pt; border: solid 1px black;" onclick="RemoveRows()" type="button"
+                                value="<" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align: top">
+                <table id="tblRight" cellspacing="0" style="border: solid 1px black; width: 100%;
+                    font-size: 9pt; color: black; font-family: Verdana;" onclick="SelectRowRight(event)">
+                    <tr id="tblRightTr1" style="background-color: #6F3752; color: White;">
+                        <td style="font-weight: bold; width: 100px; border-bottom: solid 1px black;" align="left">
+                            Student ID</td>
+                        <td style="font-weight: bold; width: 100px; border-bottom: solid 1px black;" align="left">
+                            Student Name</td>
+                    </tr>
+                </table>
+            </td>
+            <td style="vertical-align: top">
+                <table>
+                    <tr>
+                        <td>
+                            <input id="btnUp" onclick="MoveUp()" style="width: 35px; color: white; font-size: 9pt;
+                                background-color: #6f3752; border: solid 1px black;" type="button" value="Up" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="btnDown" onclick="MoveDown()" style="width: 35px; color: white; font-size: 9pt;
+                                background-color: #6f3752; border: solid 1px black;" type="button" value="Down" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

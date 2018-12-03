@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StagingdbCentralDepository" Class="MainDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=BusApCluster\BusApInstance;Initial Catalog=dbCentralDepository;Persist Security Info=True;User ID=dbaccess;Password=AdminP99" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblBankAccountTypes" Member="tblBankAccountTypes">
+    <Type Name="tblBankAccountType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Storage="_IsActive" Type="System.Byte" DbType="tinyint NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsClient" Type="System.Boolean" DbType="bit" CanBeNull="false" />
+      <Association Name="tblBankAccountType_tblBankAccount" Member="tblBankAccounts" ThisKey="ID" OtherKey="AccountTypeID" Type="tblBankAccount" />
+      <Association Name="tblMembershipClassBankAccountType_tblBankAccountType" Member="tblMembershipClassBankAccountType" ThisKey="ID" OtherKey="AccountTypeID" Type="tblMembershipClassBankAccountType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblBankAccount" Member="tblBankAccounts">
+    <Type Name="tblBankAccount">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BankBranchID" Storage="_BankID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AccountTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AccountNumber" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="BalanceUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PreviousBalance" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DocumentPresentedTimeStamp" Type="System.DateTime" DbType="Datetime" CanBeNull="false" />
+      <Column Name="ClientId" Storage="_ClientID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Association Name="tblBankAccount_tblBankAccountTransaction" Member="tblBankAccountTransactions" ThisKey="ID" OtherKey="BankAccountId" Type="tblBankAccountTransaction" />
+      <Association Name="tblBankAccountType_tblBankAccount" Member="tblBankAccountType" ThisKey="AccountTypeID" OtherKey="ID" Type="tblBankAccountType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMembershipClassBankAccountTypes" Member="tblMembershipClassBankAccountTypes">
+    <Type Name="tblMembershipClassBankAccountType">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountTypeID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipClassID" Type="System.Int32" DbType="int NOT NULL" CanBeNull="false" />
+      <Column Name="IsMandatory" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Byte" DbType="tinyint NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tblMembershipClassBankAccountType_tblBankAccountType" Member="tblBankAccountTypes" ThisKey="AccountTypeID" OtherKey="ID" Type="tblBankAccountType" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMCPWarehouseReceipt" Member="tblMCPWarehouseReceipts">
+    <Type Name="tblMCPWarehouseReceipt">
+      <Column Name="MCPId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="MemberName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsMember" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="WHR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CommodityGrade" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CommodityGradeGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Warehouse" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ExpiryDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DaysRemaining" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="IsTradable" Type="System.Boolean" DbType="bit" CanBeNull="false" />
+      <Column Name="ProductionYear" Type="System.Int32" DbType="int" CanBeNull="false" />
+      <Column Name="WHRFStatus" Type="System.String" DbType="varchar(20)" CanBeNull="false" />
+      <Column Name="GRNNumber" Type="System.String" DbType="varchar(50)" CanBeNull="false" />
+      <Association Name="tblMCPWarehouseReceipt_tblMCP" Member="tblMCPs" ThisKey="MCPId" OtherKey="Id" Type="tblMCP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMCP" Member="tblMCPs">
+    <Type Name="tblMCP">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GeneratedTimestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Session" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Association Name="tblMCPWarehouseReceipt_tblMCP" Member="tblMCPWarehouseReceipt" ThisKey="Id" OtherKey="MCPId" Type="tblMCPWarehouseReceipt" IsForeignKey="true" />
+      <Association Name="tblMCPBankAccount_tblMCP" Member="tblMCPBankAccount" ThisKey="Id" OtherKey="MCPId" Type="tblMCPBankAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMCPBankAccount" Member="tblMCPBankAccounts">
+    <Type Name="tblMCPBankAccount">
+      <Column Name="MCPId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberGuid" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountType" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Balance" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="tblMCPBankAccount_tblMCP" Member="tblMCPs" ThisKey="MCPId" OtherKey="Id" Type="tblMCP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMemberTransaction" Member="tblMemberTransactions">
+    <Type Name="tblMemberTransaction">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TransactionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="MemberId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MembershipTransactionNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Timestamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="transactionTypeId" Member="TransactionTypeId" />
+      <Argument Parameter="memberId" Member="MemberId" />
+      <Argument Parameter="transactionNo" Member="TransactionNo" />
+      <Argument Parameter="membershipTransactionNo" Member="MembershipTransactionNo" />
+    </InsertFunction>
+  </Table>
+  <Table Name="dbo.tblBankAccountTransaction" Member="tblBankAccountTransactions">
+    <Type Name="tblBankAccountTransaction">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TransactionTypeId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="BankAccountId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="TransactionNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsClosed" Storage="_Status" Type="System.Boolean" DbType="bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblBankAccount_tblBankAccountTransaction" Member="tblBankAccount" ThisKey="BankAccountId" OtherKey="ID" Type="tblBankAccount" IsForeignKey="true" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId2">
+      <Argument Parameter="transactionTypeId" Member="TransactionTypeId" />
+      <Argument Parameter="bankAccountId" Member="BankAccountId" />
+      <Argument Parameter="transactionNo" Member="TransactionNo" />
+    </InsertFunction>
+  </Table>
+  <Table Name="dbo.tblDNSnapshot" Member="tblDNSnapshots">
+    <Type Name="tblDNSnapshot">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="ClientID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="CommodityGrade" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="AvailableQuantity" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Weight" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="TradeDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastPickupDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WHRID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GeneratedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblExceptionLog" Member="tblExceptionLogs">
+    <Type Name="tblExceptionLog">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ExceptionDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExceptionType" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ShortMessage" Type="System.String" DbType="NVarChar(1500) NOT NULL" CanBeNull="false" />
+      <Column Name="FullMessage" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(350)" CanBeNull="true" />
+      <Column Name="UserGuid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IdNo" Type="System.Int32" IsReadOnly="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spCreateMCPBankAccount" Method="spCreateMCPBankAccount">
+    <Parameter Name="MCPGuid" Parameter="mCPGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberGuid" Parameter="memberGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="spCreateMCPBankAccountResult">
+      <Column Name="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spCreateMCP" Method="spCreateMCP">
+    <Parameter Name="Id" Parameter="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Timestamp" Parameter="timestamp" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Id="FunctionId1" Name="dbo.spMemberTransaction_Insert" Method="spMemberTransaction_Insert">
+    <Parameter Name="TransactionTypeId" Parameter="transactionTypeId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberId" Parameter="memberId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TransactionNo" Parameter="transactionNo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="MembershipTransactionNo" Parameter="membershipTransactionNo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spAccountTypesNotCreatedForMember" Method="spAccountTypesNotCreatedForMember">
+    <Parameter Name="MemberID" Parameter="memberID" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberClass" Parameter="memberClass" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spAccountTypesNotCreatedForMemberResult">
+      <Column Name="ID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId2" Name="dbo.spBankAccountTransaction_Insert" Method="spBankAccountTransaction_Insert">
+    <Parameter Name="TransactionTypeId" Parameter="transactionTypeId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="BankAccountId" Parameter="bankAccountId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="TransactionNo" Parameter="transactionNo" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spInsertException" Method="spInsertException">
+    <Parameter Name="Id" Parameter="id" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ExceptionDate" Parameter="exceptionDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="ExceptionType" Parameter="exceptionType" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ShortMessage" Parameter="shortMessage" Type="System.String" DbType="NVarChar(1500)" />
+    <Parameter Name="FullMessage" Parameter="fullMessage" Type="System.String" DbType="NText" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(350)" />
+    <Parameter Name="UserGuid" Parameter="userGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NText" />
+    <ElementType Name="spInsertExceptionResult">
+      <Column Name="Column1" Type="System.Decimal" DbType="Decimal(0,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spCreateMCPWarehouseReceipt" Method="spCreateMCPWarehouseReceipt">
+    <Parameter Name="MCPGuid" Parameter="mCPGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberGuid" Parameter="memberGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberId" Parameter="memberId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="MemberName" Parameter="memberName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="ClientId" Parameter="clientId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ClientName" Parameter="clientName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="IsMember" Parameter="isMember" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="WHR" Parameter="wHR" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CommodityGrade" Parameter="commodityGrade" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CommodityGradeGuid" Parameter="commodityGradeGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Warehouse" Parameter="warehouse" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Quantity" Parameter="quantity" Type="System.Double" DbType="Float" />
+    <Parameter Name="ExpiryDate" Parameter="expiryDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DaysRemaining" Parameter="daysRemaining" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="IsTradable" Parameter="isTradable" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ProductionYear" Parameter="productionYear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WHRFStatus" Parameter="wHRFStatus" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="GRNNumber" Parameter="gRNNumber" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="spCreateMCPWarehouseReceiptResult">
+      <Column Name="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spIsAccountValid" Method="spIsAccountValid">
+    <Parameter Name="AccountGuid" Parameter="accountGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="MemberGuid" Parameter="memberGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="ClientGuid" Parameter="clientGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="BankGuid" Parameter="bankGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="BankBranchGuids" Parameter="bankBranchGuids" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="AccountTypeGuid" Parameter="accountTypeGuid" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="AccountNumber" Parameter="accountNumber" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Error" Parameter="error" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <ElementType Name="spIsAccountValidResult">
+      <Column Name="Error" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

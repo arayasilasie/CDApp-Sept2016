@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+        function SelectAllRows()
+        {
+            table = document.getElementById('mytablesid');
+            inputs = table.getElementsByTagName('input');
+            
+            var checkboxes = new Array();
+            for (i = 0; i < inputs.length; i++)
+            {
+              if (!inputs[i].length)
+              {
+                if (inputs[i].type == 'checkbox')
+                  checkboxes[checkboxes.length] = inputs[i];
+              } 
+              else
+              {
+                for(k = 0; k < inputs[i].length; k++)
+                {
+                  if (inputs[i][k].type == 'checkbox')
+                    checkboxes[checkboxes.length] = inputs[i];
+                }
+              }
+            }
+            
+            for (i = 0; i < checkboxes.length; i++)
+                checkboxes[i].checked = true;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Select All" onclick="SelectAllRows()" />
+    <table id="mytablesid">
+        <tr>
+            <td><input type="checkbox" id="checkbox1"/>row1</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" id="checkbox2"/>row2</td>
+        </tr>
+    </table>
+</body>
+</html>

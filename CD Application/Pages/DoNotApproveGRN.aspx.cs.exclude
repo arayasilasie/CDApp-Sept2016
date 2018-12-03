@@ -1,0 +1,100 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using ECX.CD.Security;
+using System.Web.UI.HtmlControls;
+
+public partial class Pages_DoNotApproveGRN : System.Web.UI.Page
+{
+
+    private List<GRNApproveModel> DisplayList
+    {
+        get
+        {
+            return Session["GRNApproveList"] as List<GRNApproveModel>;
+        }
+        set
+        {
+            Session.Add("GRNApproveList", value);
+        }
+    }
+
+    List<string> SelectedIds()
+    {
+        List<string> ret = new List<string>();
+
+        foreach (RepeaterItem item in rpWR.Items)
+        {
+            if (!(((HtmlInputCheckBox)item.Controls[1]).Checked))
+            {
+                object o = item.FindControl("litGRNNo");
+                ret.Add(((Label)item.FindControl("litGRNNo")).Text);
+            }
+        }
+
+        return ret;
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!SecurityHelper.CurrentUserGuid.HasValue)
+        {
+            ErrorHandler.RedirectToSessionExpiredPage();
+        }
+        if (!SecurityHelper.HasPermission(CDSecurityRights.CDApproveWHR))
+        {
+            ErrorHandler.RedirectToErrorPage("You donot have permission to perform this task.");
+        }
+
+
+
+
+        if (IsPostBack) return;
+        ddlReason.DataSource = GRNApproveModel.Reasons;
+        ddlReason.DataTextField = "Description";
+        ddlReason.DataValueField = "ID";
+        ddlReason.DataBind();
+        DisplayList = GRNApproveModel.GetData();
+        rpWR.DataSource = DisplayList;
+        rpWR.DataBind();
+    }
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        string grn;
+        int reasonID;
+        string reason;
+        string remark;
+        grn = txtGRN.Text.Trim();
+        reasonID = int.Parse(ddlReason.SelectedValue);
+        reason = ddlReason.SelectedItem.Text;
+        remark = txtRemark.Text;
+        GRNApproveModel ob = new GRNApproveModel();
+        ob.GRNNo = grn;
+        ob.ReasonID = reasonID;
+        ob.Reason = reason;
+        ob.Remark = remark;
+        ob.Reject = true;
+        ob.DateCreated = DateTime.Today;
+        DisplayList.Add(ob);
+        rpWR.DataSource = DisplayList;
+        rpWR.DataBind();
+
+    }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        List<string> selectedIds = SelectedIds();
+        List<GRNApproveModel> lst = new List<GRNApproveModel>();
+        foreach (GRNApproveModel mdl in DisplayList)
+        {
+            if (selectedIds.Contains(mdl.GRNNo))
+                mdl.Reject = false;
+            lst.Add(mdl);
+        }
+        GRNApproveModel.Update(lst, SecurityHelper.CurrentUserGuid.Value);
+        DisplayList = GRNApproveModel.GetData();
+        rpWR.DataSource = DisplayList;
+        rpWR.DataBind();
+    }
+}

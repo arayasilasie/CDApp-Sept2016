@@ -1,0 +1,193 @@
+C:\CD\CDWebService\bin\CDWebService.dll
+C:\CD\CDWebService\bin\CDWebService.pdb
+C:\CD\CDWebService\bin\ECX.CD.BE.dll
+C:\CD\CDWebService\bin\ECX.CD.BL.dll
+C:\CD\CDWebService\bin\ECX.CD.DA.dll
+C:\CD\CDWebService\bin\ECX.CD.BE.pdb
+C:\CD\CDWebService\bin\ECX.CD.BL.pdb
+C:\CD\CDWebService\bin\ECX.CD.DA.pdb
+C:\CD\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\CD\CDWebService\obj\Debug\CDWebService.dll
+C:\CD\CDWebService\obj\Debug\CDWebService.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\obj\Debug\CDWebService.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\CDWebService.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\CDWebService.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.BE.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.BL.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.DA.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.BE.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.BL.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\bin\ECX.CD.DA.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\CDWebService\obj\Debug\CDWebService.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\CDWebService.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\CDWebService.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.BE.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.BL.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.DA.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.BE.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.BL.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\bin\ECX.CD.DA.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\obj\Debug\CDWebService.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\CDWebService\obj\Debug\CDWebService.pdb
+D:\ECX Applications\CD\CDWebService\bin\CDWebService.dll
+D:\ECX Applications\CD\CDWebService\bin\CDWebService.pdb
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.BE.dll
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.BL.dll
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.DA.dll
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.BE.pdb
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.BL.pdb
+D:\ECX Applications\CD\CDWebService\bin\ECX.CD.DA.pdb
+D:\ECX Applications\CD\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\ECX Applications\CD\CDWebService\obj\Debug\CDWebService.dll
+D:\ECX Applications\CD\CDWebService\obj\Debug\CDWebService.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\CDWebService.dll
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\CDWebService.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.BL.dll
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.DA.dll
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.BL.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\bin\ECX.CD.DA.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\obj\Debug\CDWebService.dll
+C:\Inetpub\wwwroot\Staging\CD Application\CDWebService\obj\Debug\CDWebService.pdb
+D:\ECX Applications\CD Application\CDWebService\bin\CDWebService.dll
+D:\ECX Applications\CD Application\CDWebService\bin\CDWebService.pdb
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.BE.dll
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.BL.dll
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.DA.dll
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.BE.pdb
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.BL.pdb
+D:\ECX Applications\CD Application\CDWebService\bin\ECX.CD.DA.pdb
+D:\ECX Applications\CD Application\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+D:\ECX Applications\CD Application\CDWebService\obj\Debug\CDWebService.dll
+D:\ECX Applications\CD Application\CDWebService\obj\Debug\CDWebService.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\CDWebService.dll
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\CDWebService.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.BL.dll
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.DA.dll
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.BL.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\bin\ECX.CD.DA.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\obj\Debug\CDWebService.dll
+C:\Inetpub\wwwroot\Applications\CD Application\CDWebService\obj\Debug\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.BL.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.DA.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.BL.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\bin\ECX.CD.DA.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\obj\Debug\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\CDWebService\obj\Debug\CDWebService.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\CDWebService.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\CDWebService.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.BE.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.BL.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.DA.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.BE.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.BL.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\bin\ECX.CD.DA.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\obj\Debug\CDWebService.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\CDWebService\obj\Debug\CDWebService.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\CDWebService.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\CDWebService.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.BL.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.DA.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.BL.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\bin\ECX.CD.DA.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\obj\Debug\CDWebService.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\CDWebService\obj\Debug\CDWebService.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\CDWebService.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\CDWebService.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BL.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.DA.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BL.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.DA.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BL.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.DA.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.BL.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ECX.CD.DA.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\obj\Debug\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ActiveReports6.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ActiveReports.Document.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\CDWebService\bin\ActiveReports.Chart.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ActiveReports6.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ActiveReports.Document.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ActiveReports.Chart.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\CDWebService.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.BL.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\bin\ECX.CD.DA.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\CDWebService\obj\Debug\CDWebService.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\CDWebService.dll
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\CDWebService.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.BL.dll
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.DA.dll
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.BL.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\bin\ECX.CD.DA.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.dll
+C:\inetpub\wwwroot\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\CDWebService.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\CDWebService.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.BE.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.BL.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.DA.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.BE.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.BL.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\bin\ECX.CD.DA.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.csprojResolveAssemblyReference.cache
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\CDWebService\obj\Debug\CDWebService.pdb

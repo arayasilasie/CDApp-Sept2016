@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TitleTransfer" targetNamespace="http://tempuri.org/TitleTransfer.xsd" xmlns:mstns="http://tempuri.org/TitleTransfer.xsd" xmlns="http://tempuri.org/TitleTransfer.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="StagingdbCentralDepositoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="StagingdbCentralDepositoryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.StagingdbCentralDepositoryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TitleTransfer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="TitleTransfer" msprop:Generator_DataSetName="TitleTransfer" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Trade" msprop:Generator_UserTableName="Trade" msprop:Generator_RowDeletedName="TradeRowDeleted" msprop:Generator_RowChangedName="TradeRowChanged" msprop:Generator_RowClassName="TradeRow" msprop:Generator_RowChangingName="TradeRowChanging" msprop:Generator_RowEvArgName="TradeRowChangeEvent" msprop:Generator_RowEvHandlerName="TradeRowChangeEventHandler" msprop:Generator_TableClassName="TradeDataTable" msprop:Generator_TableVarName="tableTrade" msprop:Generator_RowDeletingName="TradeRowDeleting" msprop:Generator_TablePropName="Trade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="Buy_Order" msprop:Generator_UserColumnName="Buy_Order" msprop:Generator_ColumnPropNameInRow="Buy_Order" msprop:Generator_ColumnVarNameInTable="columnBuy_Order" msprop:Generator_ColumnPropNameInTable="Buy_OrderColumn" type="xs:int" />
+              <xs:element name="Sell_Order" msprop:Generator_UserColumnName="Sell_Order" msprop:Generator_ColumnPropNameInRow="Sell_Order" msprop:Generator_ColumnVarNameInTable="columnSell_Order" msprop:Generator_ColumnPropNameInTable="Sell_OrderColumn" type="xs:int" />
+              <xs:element name="Trade_Status_Code" msprop:Generator_UserColumnName="Trade_Status_Code" msprop:Generator_ColumnPropNameInRow="Trade_Status_Code" msprop:Generator_ColumnVarNameInTable="columnTrade_Status_Code" msprop:Generator_ColumnPropNameInTable="Trade_Status_CodeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_Client" msprop:Generator_UserColumnName="Buy_Client" msprop:Generator_ColumnPropNameInRow="Buy_Client" msprop:Generator_ColumnVarNameInTable="columnBuy_Client" msprop:Generator_ColumnPropNameInTable="Buy_ClientColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Sell_Client" msprop:Generator_UserColumnName="Sell_Client" msprop:Generator_ColumnPropNameInRow="Sell_Client" msprop:Generator_ColumnVarNameInTable="columnSell_Client" msprop:Generator_ColumnPropNameInTable="Sell_ClientColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Price" msprop:Generator_UserColumnName="Price" msprop:Generator_ColumnPropNameInRow="Price" msprop:Generator_ColumnVarNameInTable="columnPrice" msprop:Generator_ColumnPropNameInTable="PriceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SessionID" msprop:Generator_UserColumnName="SessionID" msprop:Generator_ColumnPropNameInRow="SessionID" msprop:Generator_ColumnVarNameInTable="columnSessionID" msprop:Generator_ColumnPropNameInTable="SessionIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Created_By" msprop:Generator_UserColumnName="Created_By" msprop:Generator_ColumnPropNameInRow="Created_By" msprop:Generator_ColumnVarNameInTable="columnCreated_By" msprop:Generator_ColumnPropNameInTable="Created_ByColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Created_Timestamp" msprop:Generator_UserColumnName="Created_Timestamp" msprop:Generator_ColumnPropNameInRow="Created_Timestamp" msprop:Generator_ColumnVarNameInTable="columnCreated_Timestamp" msprop:Generator_ColumnPropNameInTable="Created_TimestampColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Last_Modified_By" msprop:Generator_UserColumnName="Last_Modified_By" msprop:Generator_ColumnPropNameInRow="Last_Modified_By" msprop:Generator_ColumnVarNameInTable="columnLast_Modified_By" msprop:Generator_ColumnPropNameInTable="Last_Modified_ByColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Last_Modified_TimeStamp" msprop:Generator_UserColumnName="Last_Modified_TimeStamp" msprop:Generator_ColumnPropNameInRow="Last_Modified_TimeStamp" msprop:Generator_ColumnVarNameInTable="columnLast_Modified_TimeStamp" msprop:Generator_ColumnPropNameInTable="Last_Modified_TimeStampColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateTimeCleared" msprop:Generator_UserColumnName="DateTimeCleared" msprop:Generator_ColumnPropNameInRow="DateTimeCleared" msprop:Generator_ColumnVarNameInTable="columnDateTimeCleared" msprop:Generator_ColumnPropNameInTable="DateTimeClearedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sell_Member" msprop:Generator_UserColumnName="Sell_Member" msprop:Generator_ColumnPropNameInRow="Sell_Member" msprop:Generator_ColumnVarNameInTable="columnSell_Member" msprop:Generator_ColumnPropNameInTable="Sell_MemberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_Member" msprop:Generator_UserColumnName="Buy_Member" msprop:Generator_ColumnPropNameInRow="Buy_Member" msprop:Generator_ColumnVarNameInTable="columnBuy_Member" msprop:Generator_ColumnPropNameInTable="Buy_MemberColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Sell_SelfTrade" msprop:Generator_UserColumnName="Sell_SelfTrade" msprop:Generator_ColumnPropNameInRow="Sell_SelfTrade" msprop:Generator_ColumnVarNameInTable="columnSell_SelfTrade" msprop:Generator_ColumnPropNameInTable="Sell_SelfTradeColumn" type="xs:boolean" />
+              <xs:element name="Buy_SelfTrade" msprop:Generator_UserColumnName="Buy_SelfTrade" msprop:Generator_ColumnPropNameInRow="Buy_SelfTrade" msprop:Generator_ColumnVarNameInTable="columnBuy_SelfTrade" msprop:Generator_ColumnPropNameInTable="Buy_SelfTradeColumn" type="xs:boolean" />
+              <xs:element name="Sell_Ticket_No" msprop:Generator_UserColumnName="Sell_Ticket_No" msprop:Generator_ColumnPropNameInRow="Sell_Ticket_No" msprop:Generator_ColumnVarNameInTable="columnSell_Ticket_No" msprop:Generator_ColumnPropNameInTable="Sell_Ticket_NoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buy_Ticket_No" msprop:Generator_UserColumnName="Buy_Ticket_No" msprop:Generator_ColumnPropNameInRow="Buy_Ticket_No" msprop:Generator_ColumnVarNameInTable="columnBuy_Ticket_No" msprop:Generator_ColumnPropNameInTable="Buy_Ticket_NoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sell_EQuantity" msprop:Generator_UserColumnName="Sell_EQuantity" msprop:Generator_ColumnPropNameInRow="Sell_EQuantity" msprop:Generator_ColumnVarNameInTable="columnSell_EQuantity" msprop:Generator_ColumnPropNameInTable="Sell_EQuantityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_EQuantity" msprop:Generator_UserColumnName="Buy_EQuantity" msprop:Generator_ColumnPropNameInRow="Buy_EQuantity" msprop:Generator_ColumnVarNameInTable="columnBuy_EQuantity" msprop:Generator_ColumnPropNameInTable="Buy_EQuantityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Sell_EPrice" msprop:Generator_UserColumnName="Sell_EPrice" msprop:Generator_ColumnPropNameInRow="Sell_EPrice" msprop:Generator_ColumnVarNameInTable="columnSell_EPrice" msprop:Generator_ColumnPropNameInTable="Sell_EPriceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_EPrice" msprop:Generator_UserColumnName="Buy_EPrice" msprop:Generator_ColumnPropNameInRow="Buy_EPrice" msprop:Generator_ColumnVarNameInTable="columnBuy_EPrice" msprop:Generator_ColumnPropNameInTable="Buy_EPriceColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WRNO" msprop:Generator_UserColumnName="WRNO" msprop:Generator_ColumnPropNameInRow="WRNO" msprop:Generator_ColumnVarNameInTable="columnWRNO" msprop:Generator_ColumnPropNameInTable="WRNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Seller_Signed" msprop:Generator_UserColumnName="Seller_Signed" msprop:Generator_ColumnPropNameInRow="Seller_Signed" msprop:Generator_ColumnVarNameInTable="columnSeller_Signed" msprop:Generator_ColumnPropNameInTable="Seller_SignedColumn" type="xs:boolean" />
+              <xs:element name="Buyer_Signed" msprop:Generator_UserColumnName="Buyer_Signed" msprop:Generator_ColumnPropNameInRow="Buyer_Signed" msprop:Generator_ColumnVarNameInTable="columnBuyer_Signed" msprop:Generator_ColumnPropNameInTable="Buyer_SignedColumn" type="xs:boolean" />
+              <xs:element name="Traded_Time" msprop:Generator_UserColumnName="Traded_Time" msprop:Generator_ColumnPropNameInRow="Traded_Time" msprop:Generator_ColumnVarNameInTable="columnTraded_Time" msprop:Generator_ColumnPropNameInTable="Traded_TimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Rank" msprop:Generator_UserColumnName="Rank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInTable="RankColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="TitleTransfer" msprop:Generator_UserColumnName="TitleTransfer" msprop:Generator_ColumnPropNameInRow="TitleTransfer" msprop:Generator_ColumnVarNameInTable="columnTitleTransfer" msprop:Generator_ColumnPropNameInTable="TitleTransferColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MatchOrder" msprop:Generator_UserColumnName="MatchOrder" msprop:Generator_ColumnPropNameInRow="MatchOrder" msprop:Generator_ColumnVarNameInTable="columnMatchOrder" msprop:Generator_ColumnPropNameInTable="MatchOrderColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ResubmitRemark" msprop:Generator_UserColumnName="ResubmitRemark" msprop:Generator_ColumnPropNameInRow="ResubmitRemark" msprop:Generator_ColumnVarNameInTable="columnResubmitRemark" msprop:Generator_ColumnPropNameInTable="ResubmitRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParentId" msprop:Generator_UserColumnName="ParentId" msprop:Generator_ColumnPropNameInRow="ParentId" msprop:Generator_ColumnVarNameInTable="columnParentId" msprop:Generator_ColumnPropNameInTable="ParentIdColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="InternalSell_Ticket_No" msprop:Generator_UserColumnName="InternalSell_Ticket_No" msprop:Generator_ColumnPropNameInRow="InternalSell_Ticket_No" msprop:Generator_ColumnVarNameInTable="columnInternalSell_Ticket_No" msprop:Generator_ColumnPropNameInTable="InternalSell_Ticket_NoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InternalBuy_Ticket_No" msprop:Generator_UserColumnName="InternalBuy_Ticket_No" msprop:Generator_ColumnPropNameInRow="InternalBuy_Ticket_No" msprop:Generator_ColumnVarNameInTable="columnInternalBuy_Ticket_No" msprop:Generator_ColumnPropNameInTable="InternalBuy_Ticket_NoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WRSelectionMethod" msprop:Generator_UserColumnName="WRSelectionMethod" msprop:Generator_ColumnPropNameInRow="WRSelectionMethod" msprop:Generator_ColumnVarNameInTable="columnWRSelectionMethod" msprop:Generator_ColumnPropNameInTable="WRSelectionMethodColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OneLotSize" msprop:Generator_UserColumnName="OneLotSize" msprop:Generator_ColumnPropNameInRow="OneLotSize" msprop:Generator_ColumnVarNameInTable="columnOneLotSize" msprop:Generator_ColumnPropNameInTable="OneLotSizeColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TradeType" msprop:Generator_UserColumnName="TradeType" msprop:Generator_ColumnPropNameInRow="TradeType" msprop:Generator_ColumnVarNameInTable="columnTradeType" msprop:Generator_ColumnPropNameInTable="TradeTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SellP" msprop:Generator_UserColumnName="SellP" msprop:Generator_ColumnPropNameInRow="SellP" msprop:Generator_ColumnVarNameInTable="columnSellP" msprop:Generator_ColumnPropNameInTable="SellPColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BuyP" msprop:Generator_UserColumnName="BuyP" msprop:Generator_ColumnPropNameInRow="BuyP" msprop:Generator_ColumnVarNameInTable="columnBuyP" msprop:Generator_ColumnPropNameInTable="BuyPColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IsSpecialTMforSell" msprop:Generator_UserColumnName="IsSpecialTMforSell" msprop:Generator_ColumnPropNameInRow="IsSpecialTMforSell" msprop:Generator_ColumnVarNameInTable="columnIsSpecialTMforSell" msprop:Generator_ColumnPropNameInTable="IsSpecialTMforSellColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IsSpecialTMforBuy" msprop:Generator_UserColumnName="IsSpecialTMforBuy" msprop:Generator_ColumnPropNameInRow="IsSpecialTMforBuy" msprop:Generator_ColumnVarNameInTable="columnIsSpecialTMforBuy" msprop:Generator_ColumnPropNameInTable="IsSpecialTMforBuyColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="VAT" msprop:Generator_UserColumnName="VAT" msprop:Generator_ColumnPropNameInRow="VAT" msprop:Generator_ColumnVarNameInTable="columnVAT" msprop:Generator_ColumnPropNameInTable="VATColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="TOT" msprop:Generator_UserColumnName="TOT" msprop:Generator_ColumnPropNameInRow="TOT" msprop:Generator_ColumnVarNameInTable="columnTOT" msprop:Generator_ColumnPropNameInTable="TOTColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewTrade" msprop:Generator_UserTableName="ViewTrade" msprop:Generator_RowDeletedName="ViewTradeRowDeleted" msprop:Generator_RowChangedName="ViewTradeRowChanged" msprop:Generator_RowClassName="ViewTradeRow" msprop:Generator_RowChangingName="ViewTradeRowChanging" msprop:Generator_RowEvArgName="ViewTradeRowChangeEvent" msprop:Generator_RowEvHandlerName="ViewTradeRowChangeEventHandler" msprop:Generator_TableClassName="ViewTradeDataTable" msprop:Generator_TableVarName="tableViewTrade" msprop:Generator_RowDeletingName="ViewTradeRowDeleting" msprop:Generator_TablePropName="ViewTrade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:int" />
+              <xs:element name="BuyerClientId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="BuyerClientId" msprop:Generator_ColumnVarNameInTable="columnBuyerClientId" msprop:Generator_ColumnPropNameInRow="BuyerClientId" msprop:Generator_ColumnPropNameInTable="BuyerClientIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BuyerName" msprop:Generator_UserColumnName="BuyerName" msprop:Generator_ColumnPropNameInRow="BuyerName" msprop:Generator_ColumnVarNameInTable="columnBuyerName" msprop:Generator_ColumnPropNameInTable="BuyerNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BuyerClient" msdata:Caption="Sell_MemberId" msprop:Generator_UserColumnName="BuyerClient" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="BuyerClient" msprop:Generator_ColumnPropNameInTable="BuyerClientColumn" msprop:Generator_ColumnVarNameInTable="columnBuyerClient" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SellerClientId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="SellerClientId" msprop:Generator_ColumnVarNameInTable="columnSellerClientId" msprop:Generator_ColumnPropNameInRow="SellerClientId" msprop:Generator_ColumnPropNameInTable="SellerClientIdColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SellerName" msdata:Caption="Sell_ClientId" msprop:Generator_UserColumnName="SellerName" msprop:Generator_ColumnPropNameInRow="SellerName" msprop:Generator_ColumnVarNameInTable="columnSellerName" msprop:Generator_ColumnPropNameInTable="SellerNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SellerClient" msdata:Caption="Sell_MemberId" msprop:Generator_UserColumnName="SellerClient" msprop:Generator_ColumnPropNameInRow="SellerClient" msprop:Generator_ColumnVarNameInTable="columnSellerClient" msprop:Generator_ColumnPropNameInTable="SellerClientColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Quantity" msprop:Generator_UserColumnName="Quantity" msprop:Generator_ColumnVarNameInTable="columnQuantity" msprop:Generator_ColumnPropNameInRow="Quantity" msprop:Generator_ColumnPropNameInTable="QuantityColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="WRNO" msprop:Generator_UserColumnName="WRNO" msprop:Generator_ColumnVarNameInTable="columnWRNO" msprop:Generator_ColumnPropNameInRow="WRNO" msprop:Generator_ColumnPropNameInTable="WRNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Trade_Status_Code" msprop:Generator_UserColumnName="Trade_Status_Code" msprop:Generator_ColumnVarNameInTable="columnTrade_Status_Code" msprop:Generator_ColumnPropNameInRow="Trade_Status_Code" msprop:Generator_ColumnPropNameInTable="Trade_Status_CodeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Created_Timestamp" msprop:Generator_UserColumnName="Created_Timestamp" msprop:Generator_ColumnVarNameInTable="columnCreated_Timestamp" msprop:Generator_ColumnPropNameInRow="Created_Timestamp" msprop:Generator_ColumnPropNameInTable="Created_TimestampColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Traded_Time" msprop:Generator_UserColumnName="Traded_Time" msprop:Generator_ColumnVarNameInTable="columnTraded_Time" msprop:Generator_ColumnPropNameInRow="Traded_Time" msprop:Generator_ColumnPropNameInTable="Traded_TimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TitleTransfer" msprop:Generator_UserColumnName="TitleTransfer" msprop:Generator_ColumnVarNameInTable="columnTitleTransfer" msprop:Generator_ColumnPropNameInRow="TitleTransfer" msprop:Generator_ColumnPropNameInTable="TitleTransferColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Trade" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ViewTrade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewTrade" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

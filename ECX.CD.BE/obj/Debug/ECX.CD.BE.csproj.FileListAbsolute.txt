@@ -1,0 +1,118 @@
+D:\ECX\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\ECX\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\ECX\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\ECX\CD\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+D:\ECX\CD\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\ECX\CD\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\CD D\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\CD\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\CD\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+D:\CD\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\CD\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Documents and Settings\Tedela.Kebede\Desktop\Collected CD\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\App Backup\Returned and Merged From Eyob and Abera\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\ECX Applications\CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\ECX Applications\CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\ECX Applications\CD\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\ECX Applications\CD\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+D:\ECX Applications\CD\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\ECX Applications\CD\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Staging\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\ECX Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\ECX Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\ECX Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\ECX Applications\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+D:\ECX Applications\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\ECX Applications\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Inetpub\wwwroot\Applications\CD Application\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.2.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+E:\1A_CDApplicationLatest_Feb.17.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.19.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CD_Application_Deployments\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\1A_CDApplicationLatest_Feb.24.2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+E:\TG files\CD _Production_Latest\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+D:\HRIS_Files\CD Application Deployment Sources\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CDApplicationLatest_Jun2017_ke67\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb
+C:\inetpub\wwwroot\CDApp Sept2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.csprojResolveAssemblyReference.cache
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll.config
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\ECX.CD.BE\bin\Debug\ECX.CD.BE.pdb
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.dll
+C:\Users\Arayasilasie.Bogale\Desktop\CDApp Sept2016\ECX.CD.BE\obj\Debug\ECX.CD.BE.pdb

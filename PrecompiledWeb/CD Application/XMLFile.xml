@@ -1,0 +1,16 @@
+﻿<!--<?xml version="1.0" encoding="utf-8" ?>
+
+- <PickupNoticeInformation PickupNoticeId="System.Guid" ClientId="System.Guid" 
+						   WarehouseId="System.Guid" ExpirationDate="System.DateTime" 
+						   ExpectedPickupDate="System.DateTime" CommodityGradeId="System.Guid" 
+						   Quantity="System.Decimal" Weight="System.Decimal" Status="System.Int32 Value(0)">
+	- <PickupNoticeAgents>
+		<PickupNoticeAgent Id="System.Guid" PickupNoticeId="System.Guid" AgentName="System.String" 
+						   NIDType="System.Int32" NIDNumber="System.String" Status="System.Int32" />
+	</PickupNoticeAgents>
+	- <WarehouseReceipts>
+		<WarehouseReceipt Id="System.Guid" WarehouseReceiptId="System.Int32" PickupNoticeId="System.Guid" 
+						  GRNID="System.Guid" GRNNo="System.String" ShedId="System.Guid" BagType="System.Guid" 
+						  Quantity="System.Decimal" Weight="System.Decimal" Bags="System.Int32" />
+	</WarehouseReceipts>
+</PickupNoticeInformation>-->

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetGINList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GINNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GINNo2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GINStatus" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateIssued" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateIssued2" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateApproved" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateApproved2" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="WarehouseID" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="WHRNo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GINID" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGINResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetGINListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGINList" />
+  </wsdl:message>
+  <wsdl:message name="GetGINListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGINSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGIN" />
+  </wsdl:message>
+  <wsdl:message name="GetGINSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGINResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GINInformationSoap">
+    <wsdl:operation name="GetGINList">
+      <wsdl:input message="tns:GetGINListSoapIn" />
+      <wsdl:output message="tns:GetGINListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGIN">
+      <wsdl:input message="tns:GetGINSoapIn" />
+      <wsdl:output message="tns:GetGINSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GINInformationSoap" type="tns:GINInformationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGINList">
+      <soap:operation soapAction="http://tempuri.org/GetGINList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGIN">
+      <soap:operation soapAction="http://tempuri.org/GetGIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GINInformationSoap12" type="tns:GINInformationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetGINList">
+      <soap12:operation soapAction="http://tempuri.org/GetGINList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGIN">
+      <soap12:operation soapAction="http://tempuri.org/GetGIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GINInformation">
+    <wsdl:port name="GINInformationSoap" binding="tns:GINInformationSoap">
+      <soap:address location="http://localhost/WHWebservice/GINInformation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GINInformationSoap12" binding="tns:GINInformationSoap12">
+      <soap12:address location="http://localhost/WHWebservice/GINInformation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

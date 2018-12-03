@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://unpledge/" targetNamespace="http://unpledge/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ECXMessage" type="tns:ecxMessage" />
+  <xs:element name="ECXRequest" type="tns:ecxRequest" />
+  <xs:element name="ECXRequestData" type="tns:ecxRequestData" />
+  <xs:element name="ECXRequestHeader" type="tns:ecxRequestHeader" />
+  <xs:element name="ECXResponse" type="tns:ECXResponse" />
+  <xs:element name="ECXResponseData" type="tns:ecxResponseData" />
+  <xs:element name="ECXResponseHeader" type="tns:ecxResponseHeader" />
+  <xs:element name="Transaction" type="tns:transaction" />
+  <xs:element name="TransactionResponse" type="tns:transactionResponse" />
+  <xs:element name="authoriazeUnpledgeResponce" type="tns:authoriazeUnpledgeResponce" />
+  <xs:element name="authoriazeUnpledgeResponceResponse" type="tns:authoriazeUnpledgeResponceResponse" />
+  <xs:element name="getAllUnpledgeRequest" type="tns:getAllUnpledgeRequest" />
+  <xs:element name="getAllUnpledgeRequestResponse" type="tns:getAllUnpledgeRequestResponse" />
+  <xs:element name="getNewLNSRequest" type="tns:getNewLNSRequest" />
+  <xs:element name="getNewLNSRequestResponse" type="tns:getNewLNSRequestResponse" />
+  <xs:element name="getUnPledgeRequestByBank" type="tns:getUnPledgeRequestByBank" />
+  <xs:element name="getUnPledgeRequestByBankResponse" type="tns:getUnPledgeRequestByBankResponse" />
+  <xs:complexType name="getNewLNSRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankname" type="xs:string" />
+      <xs:element minOccurs="0" name="requestType" type="xs:string" />
+      <xs:element minOccurs="0" name="filename" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNewLNSRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authoriazeUnpledgeResponce">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="unPledgeResponce" type="tns:ecxAllUnpledgeResponce" />
+      <xs:element minOccurs="0" name="keyFile" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="filename" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxAllUnpledgeResponce">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ecxpledgerequest" nillable="true" type="tns:ecxMessage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ECXResponse" type="tns:ECXResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ECXResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ECXResponseHeader" type="tns:ecxResponseHeader" />
+      <xs:element minOccurs="0" name="ECXResponseData" type="tns:ecxResponseData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxResponseHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsLive" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseOriginator" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseSignature" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bank" type="xs:string" />
+      <xs:element minOccurs="0" name="ResponseDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TransactionResponse" type="tns:transactionResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transactionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXClientID" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXMemberID" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:string" />
+      <xs:element minOccurs="0" name="WHRID" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="authoriazeUnpledgeResponceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUnPledgeRequestByBank">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string" />
+      <xs:element minOccurs="0" name="bank" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUnPledgeRequestByBankResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ecxRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ECXRequestData" type="tns:ecxRequestData" />
+      <xs:element minOccurs="0" name="ECXRequestHeader" type="tns:ecxRequestHeader" />
+      <xs:element name="requestNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bank" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestDate" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction" type="tns:transaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BranchName" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXClientID" type="xs:string" />
+      <xs:element minOccurs="0" name="ECXMemberID" type="xs:string" />
+      <xs:element minOccurs="0" name="OrganizationName" type="xs:string" />
+      <xs:element name="WHRID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxRequestHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsLive" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestDestination" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestSignature" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestType" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUnpledgeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="date" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUnpledgeRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ecxAllUnpledgeRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ecxAllUnpledgeRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ecxpledgerequest" nillable="true" type="tns:ecxRequest" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

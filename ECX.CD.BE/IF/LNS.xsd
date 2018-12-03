@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LNS" targetNamespace="http://tempuri.org/LNS.xsd" xmlns:mstns="http://tempuri.org/LNS.xsd" xmlns="http://tempuri.org/LNS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ECXIFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ECXIFConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.ECXIFConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ECXIFConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ECXIFConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.ECXIFConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LNS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="LNS" msprop:Generator_DataSetName="LNS" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LiftNoSaleRequestRejected" msprop:Generator_UserTableName="LiftNoSaleRequestRejected" msprop:Generator_RowDeletedName="LiftNoSaleRequestRejectedRowDeleted" msprop:Generator_RowChangedName="LiftNoSaleRequestRejectedRowChanged" msprop:Generator_RowClassName="LiftNoSaleRequestRejectedRow" msprop:Generator_RowChangingName="LiftNoSaleRequestRejectedRowChanging" msprop:Generator_RowEvArgName="LiftNoSaleRequestRejectedRowChangeEvent" msprop:Generator_RowEvHandlerName="LiftNoSaleRequestRejectedRowChangeEventHandler" msprop:Generator_TableClassName="LiftNoSaleRequestRejectedDataTable" msprop:Generator_TableVarName="tableLiftNoSaleRequestRejected" msprop:Generator_RowDeletingName="LiftNoSaleRequestRejectedRowDeleting" msprop:Generator_TablePropName="LiftNoSaleRequestRejected">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="LiftNoSaleRequestId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="LiftNoSaleRequestId" msprop:Generator_ColumnPropNameInRow="LiftNoSaleRequestId" msprop:Generator_ColumnVarNameInTable="columnLiftNoSaleRequestId" msprop:Generator_ColumnPropNameInTable="LiftNoSaleRequestIdColumn" type="xs:string" />
+              <xs:element name="RejectionReasonCode" msprop:Generator_UserColumnName="RejectionReasonCode" msprop:Generator_ColumnPropNameInRow="RejectionReasonCode" msprop:Generator_ColumnVarNameInTable="columnRejectionReasonCode" msprop:Generator_ColumnPropNameInTable="RejectionReasonCodeColumn" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewLiftNoSale" msprop:Generator_UserTableName="ViewLiftNoSale" msprop:Generator_RowDeletedName="ViewLiftNoSaleRowDeleted" msprop:Generator_RowChangedName="ViewLiftNoSaleRowChanged" msprop:Generator_RowClassName="ViewLiftNoSaleRow" msprop:Generator_RowChangingName="ViewLiftNoSaleRowChanging" msprop:Generator_RowEvArgName="ViewLiftNoSaleRowChangeEvent" msprop:Generator_RowEvHandlerName="ViewLiftNoSaleRowChangeEventHandler" msprop:Generator_TableClassName="ViewLiftNoSaleDataTable" msprop:Generator_TableVarName="tableViewLiftNoSale" msprop:Generator_RowDeletingName="ViewLiftNoSaleRowDeleting" msprop:Generator_TablePropName="ViewLiftNoSale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="Selected" msprop:Generator_UserColumnName="Selected" msprop:Generator_ColumnPropNameInRow="Selected" msprop:Generator_ColumnVarNameInTable="columnSelected" msprop:Generator_ColumnPropNameInTable="SelectedColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WHRNO" msprop:Generator_UserColumnName="WHRNO" msprop:Generator_ColumnVarNameInTable="columnWHRNO" msprop:Generator_ColumnPropNameInRow="WHRNO" msprop:Generator_ColumnPropNameInTable="WHRNOColumn" type="xs:int" />
+              <xs:element name="MemberIdNO" msprop:Generator_UserColumnName="MemberIdNO" msprop:Generator_ColumnPropNameInRow="MemberIdNO" msprop:Generator_ColumnVarNameInTable="columnMemberIdNO" msprop:Generator_ColumnPropNameInTable="MemberIdNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientIdNO" msprop:Generator_UserColumnName="ClientIdNO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnClientIdNO" msprop:Generator_ColumnPropNameInTable="ClientIdNOColumn" msprop:Generator_ColumnPropNameInRow="ClientIdNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankName" msdata:Caption="BankBranchId" msprop:Generator_UserColumnName="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" type="xs:string" />
+              <xs:element name="BankBranchName" msprop:Generator_UserColumnName="BankBranchName" msprop:Generator_ColumnPropNameInRow="BankBranchName" msprop:Generator_ColumnVarNameInTable="columnBankBranchName" msprop:Generator_ColumnPropNameInTable="BankBranchNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoanAccountNumber" msprop:Generator_UserColumnName="LoanAccountNumber" msprop:Generator_ColumnVarNameInTable="columnLoanAccountNumber" msprop:Generator_ColumnPropNameInRow="LoanAccountNumber" msprop:Generator_ColumnPropNameInTable="LoanAccountNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestDate" msprop:Generator_UserColumnName="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" type="xs:dateTime" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:unsignedByte" />
+              <xs:element name="StatusName" msdata:Caption="Status" msprop:Generator_UserColumnName="StatusName" msprop:Generator_ColumnVarNameInTable="columnStatusName" msprop:Generator_ColumnPropNameInRow="StatusName" msprop:Generator_ColumnPropNameInTable="StatusNameColumn" type="xs:string" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfirmedBy" msprop:Generator_UserColumnName="ConfirmedBy" msprop:Generator_ColumnPropNameInRow="ConfirmedBy" msprop:Generator_ColumnVarNameInTable="columnConfirmedBy" msprop:Generator_ColumnPropNameInTable="ConfirmedByColumn" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="DateConfirmed" msprop:Generator_UserColumnName="DateConfirmed" msprop:Generator_ColumnPropNameInRow="DateConfirmed" msprop:Generator_ColumnVarNameInTable="columnDateConfirmed" msprop:Generator_ColumnPropNameInTable="DateConfirmedColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuthorizedBy" msprop:Generator_UserColumnName="AuthorizedBy" msprop:Generator_ColumnPropNameInRow="AuthorizedBy" msprop:Generator_ColumnVarNameInTable="columnAuthorizedBy" msprop:Generator_ColumnPropNameInTable="AuthorizedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AuthorizedDate" msprop:Generator_UserColumnName="AuthorizedDate" msprop:nullValue="_throw" msprop:Generator_ColumnVarNameInTable="columnAuthorizedDate" msprop:Generator_ColumnPropNameInTable="AuthorizedDateColumn" msprop:Generator_ColumnPropNameInRow="AuthorizedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RejectionReasons" msprop:Generator_UserColumnName="RejectionReasons" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="RejectionReasons" msprop:Generator_ColumnPropNameInTable="RejectionReasonsColumn" msprop:Generator_ColumnVarNameInTable="columnRejectionReasons" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Authorized" msprop:Generator_UserColumnName="Authorized" msprop:Generator_ColumnPropNameInRow="Authorized" msprop:Generator_ColumnVarNameInTable="columnAuthorized" msprop:Generator_ColumnPropNameInTable="AuthorizedColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LNSState" msprop:Generator_UserTableName="LNSState" msprop:Generator_RowDeletedName="LNSStateRowDeleted" msprop:Generator_RowChangedName="LNSStateRowChanged" msprop:Generator_RowClassName="LNSStateRow" msprop:Generator_RowChangingName="LNSStateRowChanging" msprop:Generator_RowEvArgName="LNSStateRowChangeEvent" msprop:Generator_RowEvHandlerName="LNSStateRowChangeEventHandler" msprop:Generator_TableClassName="LNSStateDataTable" msprop:Generator_TableVarName="tableLNSState" msprop:Generator_RowDeletingName="LNSStateRowDeleting" msprop:Generator_TablePropName="LNSState">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LNSId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:Caption="PledgeRequestId" msprop:Generator_UserColumnName="LNSId" msprop:Generator_ColumnPropNameInRow="LNSId" msprop:Generator_ColumnVarNameInTable="columnLNSId" msprop:Generator_ColumnPropNameInTable="LNSIdColumn" type="xs:string" />
+              <xs:element name="UserId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UserId" msprop:Generator_ColumnPropNameInRow="UserId" msprop:Generator_ColumnVarNameInTable="columnUserId" msprop:Generator_ColumnPropNameInTable="UserIdColumn" type="xs:string" />
+              <xs:element name="Selected" msprop:Generator_UserColumnName="Selected" msprop:Generator_ColumnPropNameInRow="Selected" msprop:Generator_ColumnVarNameInTable="columnSelected" msprop:Generator_ColumnPropNameInTable="SelectedColumn" type="xs:boolean" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInTable="RemarkColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LiftNoSale" msprop:Generator_UserTableName="LiftNoSale" msprop:Generator_RowDeletedName="LiftNoSaleRowDeleted" msprop:Generator_RowChangedName="LiftNoSaleRowChanged" msprop:Generator_RowClassName="LiftNoSaleRow" msprop:Generator_RowChangingName="LiftNoSaleRowChanging" msprop:Generator_RowEvArgName="LiftNoSaleRowChangeEvent" msprop:Generator_RowEvHandlerName="LiftNoSaleRowChangeEventHandler" msprop:Generator_TableClassName="LiftNoSaleDataTable" msprop:Generator_TableVarName="tableLiftNoSale" msprop:Generator_RowDeletingName="LiftNoSaleRowDeleting" msprop:Generator_TablePropName="LiftNoSale">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="WHRNO" msprop:Generator_UserColumnName="WHRNO" msprop:Generator_ColumnVarNameInTable="columnWHRNO" msprop:Generator_ColumnPropNameInRow="WHRNO" msprop:Generator_ColumnPropNameInTable="WHRNOColumn" type="xs:int" />
+              <xs:element name="MemberIdNO" msprop:Generator_UserColumnName="MemberIdNO" msprop:Generator_ColumnVarNameInTable="columnMemberIdNO" msprop:Generator_ColumnPropNameInRow="MemberIdNO" msprop:Generator_ColumnPropNameInTable="MemberIdNOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClientIdNO" msprop:Generator_UserColumnName="ClientIdNO" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnClientIdNO" msprop:Generator_ColumnPropNameInTable="ClientIdNOColumn" msprop:Generator_ColumnPropNameInRow="ClientIdNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankName" msprop:Generator_UserColumnName="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankBranchName" msprop:Generator_UserColumnName="BankBranchName" msprop:Generator_ColumnVarNameInTable="columnBankBranchName" msprop:Generator_ColumnPropNameInRow="BankBranchName" msprop:Generator_ColumnPropNameInTable="BankBranchNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoanAccountNumber" msprop:Generator_UserColumnName="LoanAccountNumber" msprop:Generator_ColumnVarNameInTable="columnLoanAccountNumber" msprop:Generator_ColumnPropNameInRow="LoanAccountNumber" msprop:Generator_ColumnPropNameInTable="LoanAccountNumberColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestDate" msprop:Generator_UserColumnName="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" type="xs:dateTime" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:unsignedByte" />
+              <xs:element name="Authorized" msprop:Generator_UserColumnName="Authorized" msprop:Generator_ColumnVarNameInTable="columnAuthorized" msprop:Generator_ColumnPropNameInRow="Authorized" msprop:Generator_ColumnPropNameInTable="AuthorizedColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LiftNoSaleRequestRejected" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ViewLiftNoSale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewLiftNoSale" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="LNSState_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LNSState" />
+      <xs:field xpath="mstns:LNSId" />
+      <xs:field xpath="mstns:UserId" />
+    </xs:unique>
+    <xs:unique name="LiftNoSale_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:LiftNoSale" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

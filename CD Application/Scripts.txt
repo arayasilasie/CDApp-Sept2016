@@ -1,0 +1,63 @@
+﻿<asp:Label ID="lblId" runat="server" Visible="false"></asp:Label>
+<td colspan="2" align="right"><asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="button"></asp:Button></td>
+
+		<fieldset>
+            <legend>Drivers</legend>
+            <asp:GridView ID="dtgDrivers" runat="server" 
+                AutoGenerateColumns="False" ShowFooter="True" 
+                EmptyDataText="Empty Data Text"
+                DataKeyNames="Id" 
+                OnRowCancelingEdit="dtgDrivers_RowCancelingEdit" 
+                OnRowDataBound="dtgDrivers_RowDataBound" 
+                OnRowEditing="dtgDrivers_RowEditing" 
+                OnRowUpdating="dtgDrivers_RowUpdating" 
+                OnRowCommand="dtgDrivers_RowCommand" 
+                GridLines="Vertical" CellPadding="4">
+                <Columns>
+                    <asp:TemplateField HeaderText="Driver Name" HeaderStyle-HorizontalAlign="Left"> 
+                        <EditItemTemplate> 
+                            <asp:TextBox ID="txtDriverName" runat="server" Text='<%# Bind("DriverName") %>'></asp:TextBox> 
+                        </EditItemTemplate> 
+                        <ItemTemplate> 
+                            <asp:Label ID="lblDriverName" runat="server" Text='<%# Bind("DriverName") %>'></asp:Label> 
+                        </ItemTemplate> 
+                        <FooterTemplate> 
+                            <asp:TextBox ID="txtNewDriverName" runat="server" Text='<%# Bind("DriverName") %>'></asp:TextBox> 
+                        </FooterTemplate> 
+                    </asp:TemplateField> 
+                    
+                    <asp:TemplateField ShowHeader="False" HeaderStyle-HorizontalAlign="Left"> 
+                        <EditItemTemplate> 
+                            <asp:LinkButton ID="lbkUpdate" runat="server" CausesValidation="True" CommandName="Update" Text="Save"></asp:LinkButton> 
+                            <asp:LinkButton ID="lnkCancel" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton> 
+                        </EditItemTemplate> 
+                        <ItemTemplate> 
+                            <asp:LinkButton ID="lnkEdit" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton> 
+                        </ItemTemplate> 
+                        <FooterTemplate> 
+                            <asp:LinkButton ID="lnkAdd" runat="server" CausesValidation="False" CommandName="Insert" Text="Save"></asp:LinkButton> 
+                        </FooterTemplate>
+                    </asp:TemplateField> 
+                </Columns>
+                <HeaderStyle CssClass="GridviewHeader" ForeColor="White" />
+                <RowStyle CssClass="GridviewRow" />
+                <AlternatingRowStyle BackColor="White" />
+                <EditRowStyle CssClass="GridviewEditRow" />
+                <SelectedRowStyle CssClass="GridviewSelectedRow" />
+                <FooterStyle CssClass="GridviewFooter" />
+                <PagerStyle CssClass="GridviewPager" />
+            </asp:GridView>
+        </fieldset>
+        
+        
+
+<table>
+    <tr>
+        <td style="width:720px">
+            <asp:Button ID="btnApprove" Text="Approve" runat="server" OnClick="btnApprove_Click" />
+            <asp:Button ID="btnCancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+            <asp:Button ID="btnClose" Text="Close" runat="server" OnClick="btnClose_Click" />
+        </td>
+        <td><uc8:Paging ID="paging" runat="server" OnFillRepeater="paging_FillRepeater"/></td>
+    </tr>
+</table>        

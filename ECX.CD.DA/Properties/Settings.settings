@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ECX.CD.DA.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ECX_CD_DA_ECXTrading_Trading" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.5.20:5000/TCNS/Trading.asmx</Value>
+    </Setting>
+    <Setting Name="ECX_CD_DA_ECXLookup_ECXLookup" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.5.20:5000/ECXLookup/ECXLookup.asmx</Value>
+    </Setting>
+    <Setting Name="EnglishGuid" Type="System.Guid" Scope="Application">
+      <Value Profile="(Default)">9ad72f55-bc00-4382-873e-0c84d6eb3850</Value>
+    </Setting>
+    <Setting Name="ECX_CD_DA_GINDetail_GINDetail" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.3.5.67:5001/WareHouseApplicationWebservice2/GINDetail.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

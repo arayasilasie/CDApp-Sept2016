@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="TradeTitleTransfer" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITradeTitleTransfer_GetTradingDatesForTitleTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradingDatesForTitleTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_GetTradingDatesForTitleTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradingDatesForTitleTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_GetTradesForTitleTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradesForTitleTransfer" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_GetTradesForTitleTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTradesForTitleTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_UpdateTrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTrade" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_UpdateTrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_GetPendingTrades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTrades" />
+  </wsdl:message>
+  <wsdl:message name="ITradeTitleTransfer_GetPendingTrades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPendingTradesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITradeTitleTransfer">
+    <wsdl:operation name="GetTradingDatesForTitleTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetTradingDatesForTitleTransfer" message="tns:ITradeTitleTransfer_GetTradingDatesForTitleTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetTradingDatesForTitleTransferResponse" message="tns:ITradeTitleTransfer_GetTradingDatesForTitleTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTradesForTitleTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetTradesForTitleTransfer" message="tns:ITradeTitleTransfer_GetTradesForTitleTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetTradesForTitleTransferResponse" message="tns:ITradeTitleTransfer_GetTradesForTitleTransfer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeTitleTransfer/UpdateTrade" message="tns:ITradeTitleTransfer_UpdateTrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeTitleTransfer/UpdateTradeResponse" message="tns:ITradeTitleTransfer_UpdateTrade_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTrades">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetPendingTrades" message="tns:ITradeTitleTransfer_GetPendingTrades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITradeTitleTransfer/GetPendingTradesResponse" message="tns:ITradeTitleTransfer_GetPendingTrades_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="basicHttpBinding" type="tns:ITradeTitleTransfer">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTradingDatesForTitleTransfer">
+      <soap:operation soapAction="http://tempuri.org/ITradeTitleTransfer/GetTradingDatesForTitleTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTradesForTitleTransfer">
+      <soap:operation soapAction="http://tempuri.org/ITradeTitleTransfer/GetTradesForTitleTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTrade">
+      <soap:operation soapAction="http://tempuri.org/ITradeTitleTransfer/UpdateTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPendingTrades">
+      <soap:operation soapAction="http://tempuri.org/ITradeTitleTransfer/GetPendingTrades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TradeTitleTransfer">
+    <wsdl:port name="basicHttpBinding" binding="tns:basicHttpBinding">
+      <soap:address location="http://ecx-newmis-011.ecx.com:5000/TradeService/TradeTitleTransfer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

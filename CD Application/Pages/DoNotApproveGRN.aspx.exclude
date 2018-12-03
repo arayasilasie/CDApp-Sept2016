@@ -1,0 +1,74 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/pTop.master" AutoEventWireup="true" CodeFile="DoNotApproveGRN.aspx.cs" Inherits="Pages_DoNotApproveGRN" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table width="100%">
+<tr>
+<td>GRN</td>
+<td> Reason </td>
+<td>Remark</td>
+
+</tr>
+<tr>
+<td><asp:TextBox ID="txtGRN" runat="server" /></td>
+<td ><asp:DropDownList ID="ddlReason" runat="server" />     </td>
+<td><asp:TextBox ID="txtRemark" runat="server" /></td>
+</tr>
+<tr>
+<td></td>
+<td >   <asp:Button ID="btnAdd" Text="Add" runat="server" onclick="btnAdd_Click"  />   </td>
+<td >   <asp:Button ID="btnSave" Text="Save" runat="server" 
+        onclick="btnSave_Click"  />   </td>
+</tr>
+
+<tr>
+<td colspan="3"> <hr /> </td>
+
+</tr>
+<tr>
+<td colspan="3">
+ <asp:Repeater ID="rpWR" runat="server">
+        <HeaderTemplate>
+             <table class="sortable" cellpadding="3px" cellspacing="0" id="MyTable" width="100%">
+                <thead>
+                    <tr>
+                       <th></th>
+                       <th>GRNNo</th>
+                       <th>Date</th>
+                       <th>Reason</th>
+                       <th>Remark</th>
+                    </tr>
+                </thead>
+          </HeaderTemplate>
+          <ItemTemplate>
+            <tr class="GridviewRow">
+                <td><input runat="server" type="checkbox" id="chkSelected" style="width:15px;" checked='<%# DataBinder.Eval(Container.DataItem, "Reject")%>' /></td>
+                <td><asp:Label ID="litGRNNo" Text='<%# DataBinder.Eval(Container.DataItem, "GRNNo")%>' runat="server" /> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "DateCreated")%> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "Reason")%> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "Remark")%> </td>
+            </tr>
+          </ItemTemplate>
+          <AlternatingItemTemplate>
+            <tr class="GridviewAlternatingRow">
+                <td><input runat="server" type="checkbox" id="chkSelected" style="width:15px;" checked='<%# DataBinder.Eval(Container.DataItem, "Reject")%>' /></td>
+                <td> <asp:Label ID="litGRNNo" Text='<%# DataBinder.Eval(Container.DataItem, "GRNNo")%>' runat="server" /> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "DateCreated")%> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "Reason")%> </td>
+                <td> <%# DataBinder.Eval(Container.DataItem, "Remark")%> </td>
+            </tr>
+          </AlternatingItemTemplate>
+          <FooterTemplate>
+             </table>
+             <script type="text/javascript" src="../Javascripts/sortable.js"></script>
+          </FooterTemplate>
+    </asp:Repeater>
+ </td>
+
+</tr>
+</table>
+
+
+</asp:Content>
+

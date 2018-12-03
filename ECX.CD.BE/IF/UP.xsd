@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="UP" targetNamespace="http://tempuri.org/UP.xsd" xmlns:mstns="http://tempuri.org/UP.xsd" xmlns="http://tempuri.org/UP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ECXIFConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ECXIFConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.ECXIFConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="UP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="UP" msprop:Generator_DataSetName="UP" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UnpledgeRequestRejected" msprop:Generator_UserTableName="UnpledgeRequestRejected" msprop:Generator_RowDeletedName="UnpledgeRequestRejectedRowDeleted" msprop:Generator_RowChangedName="UnpledgeRequestRejectedRowChanged" msprop:Generator_RowClassName="UnpledgeRequestRejectedRow" msprop:Generator_RowChangingName="UnpledgeRequestRejectedRowChanging" msprop:Generator_RowEvArgName="UnpledgeRequestRejectedRowChangeEvent" msprop:Generator_RowEvHandlerName="UnpledgeRequestRejectedRowChangeEventHandler" msprop:Generator_TableClassName="UnpledgeRequestRejectedDataTable" msprop:Generator_TableVarName="tableUnpledgeRequestRejected" msprop:Generator_RowDeletingName="UnpledgeRequestRejectedRowDeleting" msprop:Generator_TablePropName="UnpledgeRequestRejected">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="UnpledgeRequestId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UnpledgeRequestId" msprop:Generator_ColumnVarNameInTable="columnUnpledgeRequestId" msprop:Generator_ColumnPropNameInRow="UnpledgeRequestId" msprop:Generator_ColumnPropNameInTable="UnpledgeRequestIdColumn" type="xs:string" />
+              <xs:element name="RejectionReasonCode" msprop:Generator_UserColumnName="RejectionReasonCode" msprop:Generator_ColumnVarNameInTable="columnRejectionReasonCode" msprop:Generator_ColumnPropNameInRow="RejectionReasonCode" msprop:Generator_ColumnPropNameInTable="RejectionReasonCodeColumn" type="xs:int" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Unpledge" msprop:Generator_UserTableName="Unpledge" msprop:Generator_RowDeletedName="UnpledgeRowDeleted" msprop:Generator_RowChangedName="UnpledgeRowChanged" msprop:Generator_RowClassName="UnpledgeRow" msprop:Generator_RowChangingName="UnpledgeRowChanging" msprop:Generator_RowEvArgName="UnpledgeRowChangeEvent" msprop:Generator_RowEvHandlerName="UnpledgeRowChangeEventHandler" msprop:Generator_TableClassName="UnpledgeDataTable" msprop:Generator_TableVarName="tableUnpledge" msprop:Generator_RowDeletingName="UnpledgeRowDeleting" msprop:Generator_TablePropName="Unpledge">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UnpledgeID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UnpledgeID" msprop:Generator_ColumnVarNameInTable="columnUnpledgeID" msprop:Generator_ColumnPropNameInRow="UnpledgeID" msprop:Generator_ColumnPropNameInTable="UnpledgeIDColumn" type="xs:string" />
+              <xs:element name="WRNo" msprop:Generator_UserColumnName="WRNo" msprop:Generator_ColumnVarNameInTable="columnWRNo" msprop:Generator_ColumnPropNameInRow="WRNo" msprop:Generator_ColumnPropNameInTable="WRNoColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ClientIdNo" msprop:Generator_UserColumnName="ClientIdNo" msprop:Generator_ColumnVarNameInTable="columnClientIdNo" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="ClientIdNo" msprop:Generator_ColumnPropNameInTable="ClientIdNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MemberIdNo" msprop:Generator_UserColumnName="MemberIdNo" msprop:Generator_ColumnVarNameInTable="columnMemberIdNo" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="MemberIdNo" msprop:Generator_ColumnPropNameInTable="MemberIdNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="BankId" msprop:Generator_ColumnVarNameInTable="columnBankId" msprop:Generator_ColumnPropNameInRow="BankId" msprop:Generator_ColumnPropNameInTable="BankIdColumn" type="xs:string" />
+              <xs:element name="Bank" msprop:Generator_UserColumnName="Bank" msprop:Generator_ColumnVarNameInTable="columnBank" msprop:Generator_ColumnPropNameInRow="Bank" msprop:Generator_ColumnPropNameInTable="BankColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankBranch" msprop:Generator_UserColumnName="BankBranch" msprop:Generator_ColumnVarNameInTable="columnBankBranch" msprop:Generator_ColumnPropNameInRow="BankBranch" msprop:Generator_ColumnPropNameInTable="BankBranchColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsResponseAuthorised" msprop:Generator_UserColumnName="IsResponseAuthorised" msprop:Generator_ColumnVarNameInTable="columnIsResponseAuthorised" msprop:Generator_ColumnPropNameInRow="IsResponseAuthorised" msprop:Generator_ColumnPropNameInTable="IsResponseAuthorisedColumn" type="xs:boolean" />
+              <xs:element name="RequestNumber" msprop:Generator_UserColumnName="RequestNumber" msprop:Generator_ColumnVarNameInTable="columnRequestNumber" msprop:Generator_ColumnPropNameInRow="RequestNumber" msprop:Generator_ColumnPropNameInTable="RequestNumberColumn" type="xs:int" />
+              <xs:element name="RequestDate" msprop:Generator_UserColumnName="RequestDate" msprop:Generator_ColumnVarNameInTable="columnRequestDate" msprop:Generator_ColumnPropNameInRow="RequestDate" msprop:Generator_ColumnPropNameInTable="RequestDateColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:int" />
+              <xs:element name="TempStatus" msprop:Generator_UserColumnName="TempStatus" msprop:Generator_ColumnVarNameInTable="columnTempStatus" msprop:Generator_ColumnPropNameInRow="TempStatus" msprop:Generator_ColumnPropNameInTable="TempStatusColumn" type="xs:unsignedByte" />
+              <xs:element name="ConfirmedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ConfirmedBy" msprop:Generator_ColumnVarNameInTable="columnConfirmedBy" msprop:Generator_ColumnPropNameInRow="ConfirmedBy" msprop:Generator_ColumnPropNameInTable="ConfirmedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfirmedDate" msprop:Generator_UserColumnName="ConfirmedDate" msprop:Generator_ColumnVarNameInTable="columnConfirmedDate" msprop:Generator_ColumnPropNameInRow="ConfirmedDate" msprop:Generator_ColumnPropNameInTable="ConfirmedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuthorizedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="AuthorizedBy" msprop:Generator_ColumnVarNameInTable="columnAuthorizedBy" msprop:Generator_ColumnPropNameInRow="AuthorizedBy" msprop:Generator_ColumnPropNameInTable="AuthorizedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AuthorizedDate" msprop:Generator_UserColumnName="AuthorizedDate" msprop:Generator_ColumnVarNameInTable="columnAuthorizedDate" msprop:Generator_ColumnPropNameInRow="AuthorizedDate" msprop:Generator_ColumnPropNameInTable="AuthorizedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UnpledgeRequestRejected" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="Unpledge_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Unpledge" />
+      <xs:field xpath="mstns:UnpledgeID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

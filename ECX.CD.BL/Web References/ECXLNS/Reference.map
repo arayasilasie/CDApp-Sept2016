@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.1.5.11:8080/ECXWRFWS-war/LNSService?wsdl" filename="LNSService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.1.5.11:8080/ECXWRFWS-war/LNSService?xsd=1" filename="LNSService.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

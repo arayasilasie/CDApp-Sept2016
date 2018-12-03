@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetVoucherByRequestId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RequestId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherByRequestIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoucherByRequestIdResult" type="tns:Cvoucher" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cvoucher">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="VoucherId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepositRequestId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoffeeTypeId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecificArea" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfBags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfPlomps" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfPlompsTrailer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertificateNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVoucherById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoucherByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoucherByIdResult" type="tns:Cvoucher" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSamplingDetailByGradingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSamplingDetailByGradingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSamplingDetailByGradingIdResult" type="tns:Csampling" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Csampling">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SamplingId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="SerialNo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GeneratedDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SampleCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SampledBy" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="SamplingStatusId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetScalingInfoByGradingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScalingInfoByGradingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScalingInfoByGradingIdResult" type="tns:CscalingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CscalingInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGrossWeight" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScaleTicketNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateWeighed" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossWeightWithTruck" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="TruckWeight" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrossWeight" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ScalingStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeigherId" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ScalingStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="New" />
+          <s:enumeration value="Approved" />
+          <s:enumeration value="Cancelled" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetScalingInfoById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScalingInfoByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScalingInfoByIdResult" type="tns:CscalingInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScaleTicketByScalingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ScalingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScaleTicketByScalingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScaleTicketByScalingIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnloadingInfoByGradingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnloadingInfoByGradingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnloadingInfoByGradingIdResult" type="tns:Cunloding" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cunloding">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalNoBags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateDeposited" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradingCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUnloadingInfoById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnloadingInfoByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUnloadingInfoByIdResult" type="tns:Cunloding" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApprovedGradingResultByCommdityDepositerequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommdityDepositerequest" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApprovedGradingResultByCommdityDepositerequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApprovedGradingResultByCommdityDepositerequestResult" type="tns:Cgrading" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Cgrading">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GradeReceivedTimeStamp" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSupervisor" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClientAcceptanceTimeStamp" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradingCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetApprovedGradingResultById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetApprovedGradingResultByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetApprovedGradingResultByIdResult" type="tns:Cgrading" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGradersByGradingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGradersByGradingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGradersByGradingIdResult" type="tns:ArrayOfEmployees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEmployees">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Employees" nillable="true" type="tns:Employees" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Employees">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSupervisor" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSamplersBySamplingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SamplingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSamplersBySamplingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSamplersBySamplingIdResult" type="tns:ArrayOfEmployees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeighersByScalingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ScalingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWeighersByScalingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWeighersByScalingIdResult" type="tns:ArrayOfEmployees" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDriverInformationByScalingId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ScalingId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDriverInformationByScalingIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDriverInformationByScalingIdResult" type="tns:ArrayOfDriverInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDriverInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DriverInformation" nillable="true" type="tns:DriverInformation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DriverInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DriverName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseIssuedPlace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlateNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TrailerPlateNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetByGradingResultDetailId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GradingResultId" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetByGradingResultDetailIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetByGradingResultDetailIdResult" type="tns:ArrayOfCGradingResultDetail" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCGradingResultDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CGradingResultDetail" nillable="true" type="tns:CGradingResultDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CGradingResultDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GradingFactor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GradingFactorValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetVoucherByRequestIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherByRequestId" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherByRequestIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherByRequestIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVoucherById" />
+  </wsdl:message>
+  <wsdl:message name="GetVoucherByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVoucherByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSamplingDetailByGradingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSamplingDetailByGradingId" />
+  </wsdl:message>
+  <wsdl:message name="GetSamplingDetailByGradingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSamplingDetailByGradingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScalingInfoByGradingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScalingInfoByGradingId" />
+  </wsdl:message>
+  <wsdl:message name="GetScalingInfoByGradingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScalingInfoByGradingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScalingInfoByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScalingInfoById" />
+  </wsdl:message>
+  <wsdl:message name="GetScalingInfoByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScalingInfoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScaleTicketByScalingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScaleTicketByScalingId" />
+  </wsdl:message>
+  <wsdl:message name="GetScaleTicketByScalingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScaleTicketByScalingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnloadingInfoByGradingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnloadingInfoByGradingId" />
+  </wsdl:message>
+  <wsdl:message name="GetUnloadingInfoByGradingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnloadingInfoByGradingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnloadingInfoByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnloadingInfoById" />
+  </wsdl:message>
+  <wsdl:message name="GetUnloadingInfoByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnloadingInfoByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApprovedGradingResultByCommdityDepositerequestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApprovedGradingResultByCommdityDepositerequest" />
+  </wsdl:message>
+  <wsdl:message name="GetApprovedGradingResultByCommdityDepositerequestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApprovedGradingResultByCommdityDepositerequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetApprovedGradingResultByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApprovedGradingResultById" />
+  </wsdl:message>
+  <wsdl:message name="GetApprovedGradingResultByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetApprovedGradingResultByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGradersByGradingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGradersByGradingId" />
+  </wsdl:message>
+  <wsdl:message name="GetGradersByGradingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGradersByGradingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSamplersBySamplingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSamplersBySamplingId" />
+  </wsdl:message>
+  <wsdl:message name="GetSamplersBySamplingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSamplersBySamplingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWeighersByScalingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWeighersByScalingId" />
+  </wsdl:message>
+  <wsdl:message name="GetWeighersByScalingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWeighersByScalingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDriverInformationByScalingIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDriverInformationByScalingId" />
+  </wsdl:message>
+  <wsdl:message name="GetDriverInformationByScalingIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDriverInformationByScalingIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetByGradingResultDetailIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetByGradingResultDetailId" />
+  </wsdl:message>
+  <wsdl:message name="GetByGradingResultDetailIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetByGradingResultDetailIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceWareHouseSoap">
+    <wsdl:operation name="GetVoucherByRequestId">
+      <wsdl:input message="tns:GetVoucherByRequestIdSoapIn" />
+      <wsdl:output message="tns:GetVoucherByRequestIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherById">
+      <wsdl:input message="tns:GetVoucherByIdSoapIn" />
+      <wsdl:output message="tns:GetVoucherByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplingDetailByGradingId">
+      <wsdl:input message="tns:GetSamplingDetailByGradingIdSoapIn" />
+      <wsdl:output message="tns:GetSamplingDetailByGradingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoByGradingId">
+      <wsdl:input message="tns:GetScalingInfoByGradingIdSoapIn" />
+      <wsdl:output message="tns:GetScalingInfoByGradingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoById">
+      <wsdl:input message="tns:GetScalingInfoByIdSoapIn" />
+      <wsdl:output message="tns:GetScalingInfoByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetScaleTicketByScalingId">
+      <wsdl:input message="tns:GetScaleTicketByScalingIdSoapIn" />
+      <wsdl:output message="tns:GetScaleTicketByScalingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoByGradingId">
+      <wsdl:input message="tns:GetUnloadingInfoByGradingIdSoapIn" />
+      <wsdl:output message="tns:GetUnloadingInfoByGradingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoById">
+      <wsdl:input message="tns:GetUnloadingInfoByIdSoapIn" />
+      <wsdl:output message="tns:GetUnloadingInfoByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultByCommdityDepositerequest">
+      <wsdl:input message="tns:GetApprovedGradingResultByCommdityDepositerequestSoapIn" />
+      <wsdl:output message="tns:GetApprovedGradingResultByCommdityDepositerequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultById">
+      <wsdl:input message="tns:GetApprovedGradingResultByIdSoapIn" />
+      <wsdl:output message="tns:GetApprovedGradingResultByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradersByGradingId">
+      <wsdl:input message="tns:GetGradersByGradingIdSoapIn" />
+      <wsdl:output message="tns:GetGradersByGradingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplersBySamplingId">
+      <wsdl:input message="tns:GetSamplersBySamplingIdSoapIn" />
+      <wsdl:output message="tns:GetSamplersBySamplingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWeighersByScalingId">
+      <wsdl:input message="tns:GetWeighersByScalingIdSoapIn" />
+      <wsdl:output message="tns:GetWeighersByScalingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverInformationByScalingId">
+      <wsdl:input message="tns:GetDriverInformationByScalingIdSoapIn" />
+      <wsdl:output message="tns:GetDriverInformationByScalingIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByGradingResultDetailId">
+      <wsdl:input message="tns:GetByGradingResultDetailIdSoapIn" />
+      <wsdl:output message="tns:GetByGradingResultDetailIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceWareHouseSoap" type="tns:WebServiceWareHouseSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVoucherByRequestId">
+      <soap:operation soapAction="http://tempuri.org/GetVoucherByRequestId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherById">
+      <soap:operation soapAction="http://tempuri.org/GetVoucherById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplingDetailByGradingId">
+      <soap:operation soapAction="http://tempuri.org/GetSamplingDetailByGradingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoByGradingId">
+      <soap:operation soapAction="http://tempuri.org/GetScalingInfoByGradingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoById">
+      <soap:operation soapAction="http://tempuri.org/GetScalingInfoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScaleTicketByScalingId">
+      <soap:operation soapAction="http://tempuri.org/GetScaleTicketByScalingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoByGradingId">
+      <soap:operation soapAction="http://tempuri.org/GetUnloadingInfoByGradingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoById">
+      <soap:operation soapAction="http://tempuri.org/GetUnloadingInfoById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultByCommdityDepositerequest">
+      <soap:operation soapAction="http://tempuri.org/GetApprovedGradingResultByCommdityDepositerequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultById">
+      <soap:operation soapAction="http://tempuri.org/GetApprovedGradingResultById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradersByGradingId">
+      <soap:operation soapAction="http://tempuri.org/GetGradersByGradingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplersBySamplingId">
+      <soap:operation soapAction="http://tempuri.org/GetSamplersBySamplingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeighersByScalingId">
+      <soap:operation soapAction="http://tempuri.org/GetWeighersByScalingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverInformationByScalingId">
+      <soap:operation soapAction="http://tempuri.org/GetDriverInformationByScalingId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByGradingResultDetailId">
+      <soap:operation soapAction="http://tempuri.org/GetByGradingResultDetailId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceWareHouseSoap12" type="tns:WebServiceWareHouseSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetVoucherByRequestId">
+      <soap12:operation soapAction="http://tempuri.org/GetVoucherByRequestId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoucherById">
+      <soap12:operation soapAction="http://tempuri.org/GetVoucherById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplingDetailByGradingId">
+      <soap12:operation soapAction="http://tempuri.org/GetSamplingDetailByGradingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoByGradingId">
+      <soap12:operation soapAction="http://tempuri.org/GetScalingInfoByGradingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScalingInfoById">
+      <soap12:operation soapAction="http://tempuri.org/GetScalingInfoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScaleTicketByScalingId">
+      <soap12:operation soapAction="http://tempuri.org/GetScaleTicketByScalingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoByGradingId">
+      <soap12:operation soapAction="http://tempuri.org/GetUnloadingInfoByGradingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnloadingInfoById">
+      <soap12:operation soapAction="http://tempuri.org/GetUnloadingInfoById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultByCommdityDepositerequest">
+      <soap12:operation soapAction="http://tempuri.org/GetApprovedGradingResultByCommdityDepositerequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovedGradingResultById">
+      <soap12:operation soapAction="http://tempuri.org/GetApprovedGradingResultById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradersByGradingId">
+      <soap12:operation soapAction="http://tempuri.org/GetGradersByGradingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSamplersBySamplingId">
+      <soap12:operation soapAction="http://tempuri.org/GetSamplersBySamplingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWeighersByScalingId">
+      <soap12:operation soapAction="http://tempuri.org/GetWeighersByScalingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDriverInformationByScalingId">
+      <soap12:operation soapAction="http://tempuri.org/GetDriverInformationByScalingId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetByGradingResultDetailId">
+      <soap12:operation soapAction="http://tempuri.org/GetByGradingResultDetailId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceWareHouse">
+    <wsdl:port name="WebServiceWareHouseSoap" binding="tns:WebServiceWareHouseSoap">
+      <soap:address location="http://10.1.5.20:5000/WareHouseApplicationWebservice/WebServiceWareHouse.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceWareHouseSoap12" binding="tns:WebServiceWareHouseSoap12">
+      <soap12:address location="http://10.1.5.20:5000/WareHouseApplicationWebservice/WebServiceWareHouse.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

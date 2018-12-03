@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://LNS/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LNSService" targetNamespace="http://LNS/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://10.1.5.11:8080/ECXWRFWS-war/LNSService?xsd=1" namespace="http://LNS/" />
+    </xsd:schema>
+  </types>
+  <message name="getAllLNSRequest">
+    <part name="parameters" element="tns:getAllLNSRequest" />
+  </message>
+  <message name="getAllLNSRequestResponse">
+    <part name="parameters" element="tns:getAllLNSRequestResponse" />
+  </message>
+  <message name="getLNSRequestByBank">
+    <part name="parameters" element="tns:getLNSRequestByBank" />
+  </message>
+  <message name="getLNSRequestByBankResponse">
+    <part name="parameters" element="tns:getLNSRequestByBankResponse" />
+  </message>
+  <message name="authoriazeLNS">
+    <part name="parameters" element="tns:authoriazeLNS" />
+  </message>
+  <message name="authoriazeLNSResponse">
+    <part name="parameters" element="tns:authoriazeLNSResponse" />
+  </message>
+  <portType name="LNS">
+    <operation name="getAllLNSRequest">
+      <input message="tns:getAllLNSRequest" />
+      <output message="tns:getAllLNSRequestResponse" />
+    </operation>
+    <operation name="getLNSRequestByBank">
+      <input message="tns:getLNSRequestByBank" />
+      <output message="tns:getLNSRequestByBankResponse" />
+    </operation>
+    <operation name="authoriazeLNS">
+      <input message="tns:authoriazeLNS" />
+      <output message="tns:authoriazeLNSResponse" />
+    </operation>
+  </portType>
+  <binding name="LNSPortBinding" type="tns:LNS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAllLNSRequest">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLNSRequestByBank">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="authoriazeLNS">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LNSService">
+    <port name="LNSPort" binding="tns:LNSPortBinding">
+      <soap:address location="http://10.1.5.11:8080/ECXWRFWS-war/LNSService" />
+    </port>
+  </service>
+</definitions>

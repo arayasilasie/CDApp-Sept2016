@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FR" targetNamespace="http://tempuri.org/TPT.xsd" xmlns:mstns="http://tempuri.org/TPT.xsd" xmlns="http://tempuri.org/TPT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ECXIFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ECXIFConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ECX.CD.BE.Properties.Settings.GlobalReference.Default.ECXIFConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FR" msprop:Generator_DataSetName="FR" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Foreclosure" msprop:Generator_UserTableName="Foreclosure" msprop:Generator_RowDeletedName="ForeclosureRowDeleted" msprop:Generator_RowChangedName="ForeclosureRowChanged" msprop:Generator_RowClassName="ForeclosureRow" msprop:Generator_RowChangingName="ForeclosureRowChanging" msprop:Generator_RowEvArgName="ForeclosureRowChangeEvent" msprop:Generator_RowEvHandlerName="ForeclosureRowChangeEventHandler" msprop:Generator_TableClassName="ForeclosureDataTable" msprop:Generator_TableVarName="tableForeclosure" msprop:Generator_RowDeletingName="ForeclosureRowDeleting" msprop:Generator_TablePropName="Foreclosure">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:string" />
+              <xs:element name="WHRNO" msprop:Generator_UserColumnName="WHRNO" msprop:Generator_ColumnPropNameInRow="WHRNO" msprop:Generator_ColumnVarNameInTable="columnWHRNO" msprop:Generator_ColumnPropNameInTable="WHRNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="ECXClientID" msprop:Generator_UserColumnName="ECXClientID" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnECXClientID" msprop:Generator_ColumnPropNameInTable="ECXClientIDColumn" msprop:Generator_ColumnPropNameInRow="ECXClientID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ECXMemberID" msprop:Generator_UserColumnName="ECXMemberID" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnECXMemberID" msprop:Generator_ColumnPropNameInTable="ECXMemberIDColumn" msprop:Generator_ColumnPropNameInRow="ECXMemberID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrganizationName" msprop:Generator_UserColumnName="OrganizationName" msprop:nullValue="_empty" msprop:Generator_ColumnVarNameInTable="columnOrganizationName" msprop:Generator_ColumnPropNameInTable="OrganizationNameColumn" msprop:Generator_ColumnPropNameInRow="OrganizationName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="BankId" msprop:Generator_ColumnPropNameInRow="BankId" msprop:Generator_ColumnVarNameInTable="columnBankId" msprop:Generator_ColumnPropNameInTable="BankIdColumn" type="xs:string" />
+              <xs:element name="BankBranchName" msprop:Generator_UserColumnName="BankBranchName" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="BankBranchName" msprop:Generator_ColumnPropNameInTable="BankBranchNameColumn" msprop:Generator_ColumnVarNameInTable="columnBankBranchName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusId" msprop:Generator_UserColumnName="StatusId" msprop:Generator_ColumnPropNameInRow="StatusId" msprop:Generator_ColumnVarNameInTable="columnStatusId" msprop:Generator_ColumnPropNameInTable="StatusIdColumn" type="xs:unsignedByte" />
+              <xs:element name="TempStatusId" msprop:Generator_UserColumnName="TempStatusId" msprop:Generator_ColumnPropNameInRow="TempStatusId" msprop:Generator_ColumnVarNameInTable="columnTempStatusId" msprop:Generator_ColumnPropNameInTable="TempStatusIdColumn" type="xs:unsignedByte" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_ColumnVarNameInTable="columnRemark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConfirmedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ConfirmedBy" msprop:Generator_ColumnPropNameInRow="ConfirmedBy" msprop:Generator_ColumnVarNameInTable="columnConfirmedBy" msprop:Generator_ColumnPropNameInTable="ConfirmedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfirmedDate" msprop:Generator_UserColumnName="ConfirmedDate" msprop:Generator_ColumnPropNameInRow="ConfirmedDate" msprop:Generator_ColumnVarNameInTable="columnConfirmedDate" msprop:Generator_ColumnPropNameInTable="ConfirmedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AuthorizedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="AuthorizedBy" msprop:Generator_ColumnPropNameInRow="AuthorizedBy" msprop:Generator_ColumnVarNameInTable="columnAuthorizedBy" msprop:Generator_ColumnPropNameInTable="AuthorizedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AuthorizedDate" msprop:Generator_UserColumnName="AuthorizedDate" msprop:Generator_ColumnPropNameInRow="AuthorizedDate" msprop:Generator_ColumnVarNameInTable="columnAuthorizedDate" msprop:Generator_ColumnPropNameInTable="AuthorizedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ForeclosureRejection" msprop:Generator_UserTableName="ForeclosureRejection" msprop:Generator_RowDeletedName="ForeclosureRejectionRowDeleted" msprop:Generator_RowChangedName="ForeclosureRejectionRowChanged" msprop:Generator_RowClassName="ForeclosureRejectionRow" msprop:Generator_RowChangingName="ForeclosureRejectionRowChanging" msprop:Generator_RowEvArgName="ForeclosureRejectionRowChangeEvent" msprop:Generator_RowEvHandlerName="ForeclosureRejectionRowChangeEventHandler" msprop:Generator_TableClassName="ForeclosureRejectionDataTable" msprop:Generator_TableVarName="tableForeclosureRejection" msprop:Generator_RowDeletingName="ForeclosureRejectionRowDeleting" msprop:Generator_TablePropName="ForeclosureRejection">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="TitleTransferRequestId" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TitleTransferRequestId" msprop:Generator_ColumnPropNameInRow="TitleTransferRequestId" msprop:Generator_ColumnVarNameInTable="columnTitleTransferRequestId" msprop:Generator_ColumnPropNameInTable="TitleTransferRequestIdColumn" type="xs:string" />
+              <xs:element name="RejectionReasonCode" msprop:Generator_UserColumnName="RejectionReasonCode" msprop:Generator_ColumnPropNameInRow="RejectionReasonCode" msprop:Generator_ColumnVarNameInTable="columnRejectionReasonCode" msprop:Generator_ColumnPropNameInTable="RejectionReasonCodeColumn" type="xs:int" />
+              <xs:element name="CreatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="CreatedBy" msprop:Generator_ColumnPropNameInRow="CreatedBy" msprop:Generator_ColumnVarNameInTable="columnCreatedBy" msprop:Generator_ColumnPropNameInTable="CreatedByColumn" type="xs:string" />
+              <xs:element name="CreatedDate" msprop:Generator_UserColumnName="CreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" type="xs:dateTime" />
+              <xs:element name="UpdatedDate" msprop:Generator_UserColumnName="UpdatedDate" msprop:Generator_ColumnPropNameInRow="UpdatedDate" msprop:Generator_ColumnVarNameInTable="columnUpdatedDate" msprop:Generator_ColumnPropNameInTable="UpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UpdatedBy" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ForeclosureStatus" msprop:Generator_UserTableName="ForeclosureStatus" msprop:Generator_RowDeletedName="ForeclosureStatusRowDeleted" msprop:Generator_RowChangedName="ForeclosureStatusRowChanged" msprop:Generator_RowClassName="ForeclosureStatusRow" msprop:Generator_RowChangingName="ForeclosureStatusRowChanging" msprop:Generator_RowEvArgName="ForeclosureStatusRowChangeEvent" msprop:Generator_RowEvHandlerName="ForeclosureStatusRowChangeEventHandler" msprop:Generator_TableClassName="ForeclosureStatusDataTable" msprop:Generator_TableVarName="tableForeclosureStatus" msprop:Generator_RowDeletingName="ForeclosureStatusRowDeleting" msprop:Generator_TablePropName="ForeclosureStatus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInTable="IdColumn" type="xs:unsignedByte" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Foreclosure" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="ForeclosureRejection_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ForeclosureRejection" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ForeclosureStatus_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ForeclosureStatus" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_tblTitleTransfer_tblTPTStatus_Status" msdata:parent="ForeclosureStatus" msdata:child="Foreclosure" msdata:parentkey="Id" msdata:childkey="StatusId" msprop:Generator_UserRelationName="FK_tblTitleTransfer_tblTPTStatus_Status" msprop:Generator_RelationVarName="relationFK_tblTitleTransfer_tblTPTStatus_Status" msprop:Generator_UserChildTable="Foreclosure" msprop:Generator_UserParentTable="ForeclosureStatus" msprop:Generator_ParentPropName="ForeclosureStatusRowByFK_tblTitleTransfer_tblTPTStatus_Status" msprop:Generator_ChildPropName="GettblForeclosureRowsByFK_tblTitleTransfer_tblTPTStatus_Status" />
+      <msdata:Relationship name="FK_tblTitleTransfer_tblTPTStatus_TempStatus" msdata:parent="ForeclosureStatus" msdata:child="Foreclosure" msdata:parentkey="Id" msdata:childkey="TempStatusId" msprop:Generator_UserRelationName="FK_tblTitleTransfer_tblTPTStatus_TempStatus" msprop:Generator_RelationVarName="relationFK_tblTitleTransfer_tblTPTStatus_TempStatus" msprop:Generator_UserChildTable="Foreclosure" msprop:Generator_UserParentTable="ForeclosureStatus" msprop:Generator_ParentPropName="ForeclosureStatusRowByFK_tblTitleTransfer_tblTPTStatus_TempStatus" msprop:Generator_ChildPropName="GettblForeclosureRowsByFK_tblTitleTransfer_tblTPTStatus_TempStatus" />
+      <msdata:Relationship name="FK_tblTitleTransferRequestRejected_tblTitleTransfer" msdata:parent="Foreclosure" msdata:child="ForeclosureRejection" msdata:parentkey="Id" msdata:childkey="TitleTransferRequestId" msprop:Generator_UserRelationName="FK_tblTitleTransferRequestRejected_tblTitleTransfer" msprop:Generator_RelationVarName="relationFK_tblTitleTransferRequestRejected_tblTitleTransfer" msprop:Generator_UserChildTable="ForeclosureRejection" msprop:Generator_UserParentTable="Foreclosure" msprop:Generator_ParentPropName="tblForeclosureRow" msprop:Generator_ChildPropName="GetForeclosureRejectionRows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

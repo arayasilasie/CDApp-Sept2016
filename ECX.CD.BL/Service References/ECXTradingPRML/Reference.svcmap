@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="710eb6ce-f87f-4e21-8f8a-ac1e6e71e151" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.1.5.20:5000/TradeService/Trade.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="8c64d830-e50e-4d85-9303-848e507befe4" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/Trade.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c8ed1682-9a17-4795-950e-8fbe20a7b332" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/Trade.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d0f92b4b-16bb-4b56-8d2b-6a6c6d6c67f8" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/Trade.svc/mex" />
+    <MetadataFile FileName="ECXTrade.Service.xsd" MetadataType="Schema" ID="d247d5c7-d5a4-4422-9f4d-baf5cf0ecb4a" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/Trade.svc/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="935cd99a-a29f-49ae-bb4d-1e85a33653c8" SourceId="1" SourceUrl="http://10.1.5.20:5000/TradeService/Trade.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Pages/Inbox.aspx" title="Inbox"  description="">
+    <siteMapNode title="Bank Account">
+      <!--<siteMapNode url="~/Pages/BankAccount.aspx?Mode=Modify" title="Modify"/>-->
+      <siteMapNode url="~/Pages/RequestAccountSuspension.aspx" title="Suspend"/>
+      <siteMapNode url="~/Pages/RequestAccountResume.aspx" title="Resume from Suspend"/>
+      <siteMapNode url="~/Pages/RequestAccountClosure.aspx" title="Close"/>
+      <siteMapNode url="~/Pages/ViewBankAccount.aspx" title="View"/>
+      <siteMapNode url="~/Pages/ManageBankAccounts.aspx" title="Manage member accounts"/>
+      <siteMapNode url="~/Pages/ClientBankAccounts.aspx" title="Manage client accounts"/>
+    </siteMapNode>
+    <siteMapNode title="WHR">
+      <siteMapNode url="~/Pages/WarehouseReciept.aspx" title="Search"/>
+      <siteMapNode url="~/Pages/Unsold_ExpiredWHR.aspx" title="Unsold/Expired WHR"/>
+      <siteMapNode url="~/Pages/ExtendExpiryDate.aspx" title="Extend Expiry"/>
+      <siteMapNode url="~/Pages/GRNCancellation.aspx" title="WHR Cancellation"  description="" />
+      <!--<siteMapNode url="~/Pages/ApproveWHREdit.aspx" title="Approve WHR Edit Request"  description="" />-->
+    </siteMapNode>
+    <siteMapNode title="GIN">
+      <siteMapNode url="~/Pages/ViewGINs.aspx" title="Search"  description="" />
+      <!--<siteMapNode url="~/Pages/ApproveGINEditRequest.aspx" title="Approve Edit Request"  description="" />-->
+    </siteMapNode>
+    <!--<siteMapNode title="GRN">
+      <siteMapNode url="~/Pages/GRNCancellation.aspx" title="WHR Cancellation"  description="" />
+      <siteMapNode url="~/Pages/ApproveGINEditRequest.aspx" title="Approve Edit Request"  description="" />
+    </siteMapNode>-->
+    <siteMapNode title="Title">
+      <siteMapNode url="~/Pages/PrepareTitleTransfer.aspx" title="Prepare(TT1)"/>
+      <siteMapNode url="~/Pages/TransferTitle.aspx" title="Transfer(TT2)"/>
+    </siteMapNode>
+    <!--<siteMapNode title="Penality">
+      <siteMapNode url="~/Pages/PrepareTitleTransfer.aspx" title="WHR"/>
+      <siteMapNode url="~/Pages/TransferTitle.aspx" title="PUN"/>
+    </siteMapNode>-->
+    <siteMapNode title="Notice">
+      <siteMapNode url="~/Reports/DeliveryNotice.aspx" title="Search DN"/>
+      <siteMapNode url="~/Pages/ApprovePUN.aspx" title="Approve PUN"/>
+      <siteMapNode url="~/Pages/ViewPUN.aspx" title="Search PUN"/>
+      <siteMapNode url="~/Pages/ViewPUNBalance.aspx" title="View PUN Balance"/>
+      <siteMapNode url="~/Pages/ExtendPUNExpiryDate.aspx" title="Extend Expiry"/>
+      <siteMapNode url="~/Pages/RequestPUNEdit.aspx" title="Edit PUN"/>
+      <siteMapNode title="WHR PENALITY NOTICE">
+        <siteMapNode url="~/Pages/WHRPenality.aspx" title="WHR Penality"/>
+        <siteMapNode url="~/Pages/ApproveWHRPenality.aspx" title="Approve WHR Penality"/>
+      </siteMapNode>
+      <siteMapNode title="PUN PENALITY NOTICE">
+      <siteMapNode url="~/Pages/PUNPenality.aspx" title="PUN Penality"/>
+        <siteMapNode url="~/Pages/ApprovePUNPenality.aspx" title="Approve PUN Penality"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="WRF">
+      <siteMapNode url="~/IF/ViewPR.aspx" title="View PR"/>
+      <!--<siteMapNode title="Pledge Request">
+                <siteMapNode url="~/IF/ViewPR.aspx" title="View PR"/>
+                <siteMapNode url="~/IF/ConfirmPR.aspx" title="Confirm PR"/>
+                <siteMapNode url="~/IF/AuthorisePR.aspx" title="Authorise PR"/>
+            </siteMapNode>-->
+      <siteMapNode url="~/IF/ViewLNS.aspx" title="View LNS"/>
+      <!--<siteMapNode title="Lift No-Sale">
+                <siteMapNode url="~/IF/ViewLNS.aspx" title="View LNS"/>
+                <siteMapNode url="~/IF/ConfirmLNS.aspx" title="Confirm LNS"/>
+                <siteMapNode url="~/IF/AuthoriseLNS.aspx" title="Authorise LNS"/>
+            </siteMapNode>-->
+      <siteMapNode url="~/IF/ViewUP.aspx" title="View Unpledge Request"/>
+      <!--<siteMapNode title="Un-Pledge">
+                <siteMapNode url="~/IF/ViewUP.aspx" title="View UP"/>
+                <siteMapNode url="~/IF/ConfirmUP.aspx" title="Confirm UP"/>
+                <siteMapNode url="~/IF/AuthoriseUP.aspx" title="Authorise UP"/>
+            </siteMapNode>-->
+      <siteMapNode url="~/IF/ViewPRML.aspx" title="View PRML"/>
+      <!--<siteMapNode title="PRML">
+                <siteMapNode url="~/IF/ViewPRML.aspx" title="View PRML"/>
+                <siteMapNode url="~/IF/ConfirmPRML.aspx" title="Confirm PRML"/>
+                <siteMapNode url="~/IF/AuthorisePRML.aspx" title="Authorise PRML"/>
+            </siteMapNode>-->
+      <siteMapNode url="~/IF/ViewForeclosure.aspx" title="View Foreclosure"/>
+      <!--<siteMapNode title="Transfer Pledged Title">
+                <siteMapNode url="~/IF/ViewForeclosure.aspx" title="View Foreclosure"/>
+                <siteMapNode url="~/IF/ConfirmForeclosure.aspx" title="Confirm Foreclosure"/>
+                <siteMapNode url="~/IF/AuthoriseForeclosure.aspx" title="Authorise Foreclosure"/>
+            </siteMapNode>-->
+      <!--<siteMapNode url="~/IF/Report.aspx" title="Report"/>-->
+    </siteMapNode>
+    <siteMapNode title="Reports">
+      <siteMapNode url="~/Pages/MembersAllowedToTrade.aspx" title="MAT"/>
+      <siteMapNode url="~/Reports/MCPReportViewer.aspx" title="MCP"/>
+      <siteMapNode url="~/Reports/PreTradeInformationViewer.aspx" title="PreTrade"/>
+      <siteMapNode url="~/Reports/ExpiredBondedYardList.aspx" title="Expired Bonded Yard"/>
+      <siteMapNode url="~/Reports/MCPReportViewer2.aspx" title="MCP Beta"/>
+      <siteMapNode url="~/Reports/MCPArchive.aspx" title="MCP Archive"/>
+      <siteMapNode url="~/Reports/DNSignSheet.aspx" title="DN Sign Sheet"/>
+      <siteMapNode url="~/Reports/WRExpiryNoticeViewer.aspx" title="WR Expiry Notice"/>
+      <siteMapNode url="~/Reports/ApprovedAndNewWHRs.aspx" title="Approved and New WHRs"/>
+      
+      <siteMapNode url="~/Pages/ViewWHR.aspx" title="WHR Status"/>
+      <siteMapNode url="~/pages/HoldWHR.aspx"  title="Hold WHR"/>
+      <siteMapNode url="~/pages/ViewPUNExtensionReport.aspx"  title="PUN Extension Report"/>
+      <siteMapNode url="~/pages/WHRPenalityReport.aspx"  title="WHR Penality Report"/>
+      <siteMapNode url="~/pages/PUNPenalityReport.aspx"  title="PUN Penality Report"/>
+      
+      <siteMapNode url="~/Reports/TradableWhrViewer.aspx" title="Tradable WHRs"/>
+      <siteMapNode url="~/Reports/ExpiryNoticeLetter.aspx" title="Expiry Notice Letter"/>
+    </siteMapNode>
+    <siteMapNode title="Admin">
+      <siteMapNode url="~/Admin/ExceptionLog.aspx" title="Exception Log Viewer"/>
+      <siteMapNode url="~/Admin/Admin.aspx" title="Admin"/>
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

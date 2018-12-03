@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ECXTrade.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ECXTrade.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTradeOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TradeOrder" nillable="true" type="tns:TradeOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTradeOrder" nillable="true" type="tns:ArrayOfTradeOrder" />
+  <xs:complexType name="TradeOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BuyerClient" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="BuyerMember" type="ser:guid" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SellerClient" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="SellerMember" type="ser:guid" />
+      <xs:element minOccurs="0" name="TradeId" type="xs:long" />
+      <xs:element minOccurs="0" name="WRNO" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TradeOrder" nillable="true" type="tns:TradeOrder" />
+</xs:schema>
